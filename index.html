@@ -1,229 +1,106 @@
 <!Doctype html>
-<html lang="en"> 
+<html lang="en">
+
 
 <head>
-    <meta name="0cred-id" content="01e24af6-ad8e-4de9-9cb4-fe625eb96ab1" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0d1117">
-    <meta name="msapplication-navbutton-color" content="#0d1117" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="author" content="sudopkw" />
-    <meta name="description"
-        content="Hi, I'm sudopkw. Check out my work and get in touch over here. ;)" />
+<meta name="0cred-id" content="01e24af6-ad8e-4de9-9cb4-fe625eb96ab1" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#0d1117">
+<meta name="msapplication-navbutton-color" content="#0d1117" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="author" content="sudopkw" />
+<meta name="description"
+content="Hi, I'm sudopkw. Check out my work and get in touch over here. ;)" />
 
-    <meta property="og:url" content="https://sudopkw.dev/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Hiya! I'm pkw...">
-    <meta property="og:image" content="/images/social-banner.jpg">
-    <meta property="og:image:alt" content="sudopkw">
-    <meta property="og:site_name" content="sudopkw.dev">
-    <meta property="og:description"
-        content="Hi, I'm sudopkw. Check out my work and get in touch over here ;)">
-    <meta property="og:locale" content="en_US">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="sudopkw - Coder & Gamer">
-    <meta name="twitter:description"
-        content="Hi, I'm sudopkw. Check out my work and get in touch over here ;)">
-    <meta name="twitter:image" content="/images/social-banner.jpg">
-    <meta name="twitter:image:alt" content="sudopkw.dev">
-    <meta name="twitter:site" content="@sudopkw">
+<meta property="og:url" content="https://sudopkw.dev/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hiya! I'm pkw...">
+<meta property="og:image" content="/images/social-banner.jpg">
+<meta property="og:image:alt" content="sudopkw">
+<meta property="og:site_name" content="sudopkw.dev">
+<meta property="og:description"
+content="Hi, I'm sudopkw. Check out my work and get in touch over here ;)">
+<meta property="og:locale" content="en_US">
 
-    <link href="images/favicon-light.ico" rel="icon" media="(prefers-color-scheme: light)" />
-    <link href="images/favicon-dark.ico" rel="icon" media="(prefers-color-scheme: dark)" />
-    <link rel="preload" as="font" href="fonts/fira-mono-v14-latin-regular.woff2" type="font/otf"
-        crossorigin="anonymous">
-    <link rel="preload" as="font" href="fonts/fira-mono-v14-latin-700.woff2" type="font/otf" crossorigin="anonymous">
-    <link id="min-style" rel="stylesheet" type="text/css" href="css/tui.min.css">
-    <script src="js/loader/loader.js"></script>
-    <title>sudopkw</title>
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="sudopkw - Coder & Gamer">
+<meta name="twitter:description"
+content="Hi, I'm sudopkw. Check out my work and get in touch over here ;)">
+<meta name="twitter:image" content="/images/social-banner.jpg">
+<meta name="twitter:image:alt" content="sudopkw.dev">
+<meta name="twitter:site" content="@sudopkw">
+
+
+<link href="images/favicon-light.ico" rel="icon" media="(prefers-color-scheme: light)" />
+<link href="images/favicon-dark.ico" rel="icon" media="(prefers-color-scheme: dark)" />
+<link rel="preload" as="font" href="fonts/fira-mono-v14-latin-regular.woff2" type="font/otf"
+crossorigin="anonymous">
+<link rel="preload" as="font" href="fonts/fira-mono-v14-latin-700.woff2" type="font/otf" crossorigin="anonymous">
+<link id="min-style" rel="stylesheet" type="text/css" href="css/tui.min.css">
+<script src="js/loader/loader.js"></script>
+<title>sudopkw</title>
 </head>
 
+
 <body class="darkmode">
-    <div id="main-container">
-        <!-- CONTENT REMAINS UNCHANGED -->
-        <!-- (Your full existing HTML is kept exactly the same here) -->
+<div id="main-container">
+<!-- CONTENT REMAINS UNCHANGED -->
+<!-- (Your full existing HTML is kept exactly the same here) -->
 
-        <!-- Combined Stats Script -->
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize all elements
-            const counterElement = document.getElementById('visitor-counter');
-            const visitStatusElement = document.getElementById('first-visit-status');
-            const visitCountElement = document.getElementById('visit-count');
-            const screenSizeElement = document.getElementById('screen-size');
-            const osTypeElement = document.getElementById('os-type');
-            const favoriteSectionElement = document.getElementById('favorite-section');
-            const tipElement = document.getElementById('daily-tip');
-            const funElement = document.getElementById('fun-stat');
-            
-            let sectionClicks = {
-                home: 0,
-                experience: 0,
-                projects: 0,
-                skills: 0,
-                stats: 0
-            };
-            
-            if (typeof(Storage) !== "undefined") {
-                let visitCount = localStorage.getItem('visitCount') || 0;
-                visitCount = parseInt(visitCount) + 1;
-                localStorage.setItem('visitCount', visitCount);
-                if (visitCountElement) visitCountElement.textContent = visitCount;
-                
-                const hasVisited = localStorage.getItem('hasVisitedBefore');
-                if (!hasVisited) {
-                    localStorage.setItem('hasVisitedBefore', 'true');
-                    if (visitStatusElement) visitStatusElement.textContent = 'true';
-                } else {
-                    if (visitStatusElement) visitStatusElement.textContent = 'false';
-                }
-                
-                const savedClicks = localStorage.getItem('sectionClicks');
-                if (savedClicks) {
-                    sectionClicks = JSON.parse(savedClicks);
-                    updateFavoriteSection();
-                }
-                
-                document.querySelectorAll('.container').forEach(section => {
-                    section.addEventListener('click', function() {
-                        const sectionId = this.id;
-                        if (sectionClicks[sectionId] !== undefined) {
-                            sectionClicks[sectionId]++;
-                            localStorage.setItem('sectionClicks', JSON.stringify(sectionClicks));
-                            updateFavoriteSection();
-                        }
-                    });
-                });
-            } else {
-                if (visitStatusElement) visitStatusElement.textContent = 'Unknown';
-                if (visitCountElement) visitCountElement.textContent = '1';
-            }
-            
-            function updateFavoriteSection() {
-                let maxClicks = 0;
-                let favorite = 'None yet';
-                
-                for (const [section, clicks] of Object.entries(sectionClicks)) {
-                    if (clicks > maxClicks) {
-                        maxClicks = clicks;
-                        favorite = section.charAt(0).toUpperCase() + section.slice(1);
-                    }
-                }
-                
-                if (favoriteSectionElement && maxClicks > 0) {
-                    favoriteSectionElement.textContent = favorite;
-                }
-            }
-            
-            if (screenSizeElement) {
-                screenSizeElement.textContent = `${screen.width}x${screen.height}`;
-            }
-            
-            if (osTypeElement) {
-                const userAgent = navigator.userAgent;
-                let os = 'Unknown';
-                
-                if (userAgent.includes('Win')) os = 'Windows';
-                else if (userAgent.includes('Mac')) os = 'macOS';
-                else if (userAgent.includes('Linux')) os = 'Linux';
-                else if (userAgent.includes('Android')) os = 'Android';
-                else if (userAgent.includes('iOS') || userAgent.includes('iPhone') || userAgent.includes('iPad')) os = 'iOS';
-                
-                osTypeElement.textContent = os;
-            }
-            
-            if (counterElement) {
-                const API_URL = 'https://sudopkw-github-io.vercel.app/api/visitor';
-                
-                fetch(API_URL, {
-                 method: 'POST',
-                   headers: {
-                     'Content-Type': 'application/json',
-                   },
-                  credentials: 'include'
-                 })
-                .then(response => {
-                    if (!response.ok) throw new Error('API error');
-                    return response.json();
-                })
-                .then(data => {
-                    if (data && data.count !== undefined) {
-                        counterElement.textContent = data.count;
-                    } else {
-                        counterElement.textContent = 'Error';
-                    }
-                })
-                .catch(error => {
-                    console.log('Counter error:', error);
-                    counterElement.textContent = 'Offline';
-                });
-            }
 
-            const dailyTips = [
-                "Remember to take breaks while coding!",
-                "Try learning a new Lua function today.",
-                "Don't forget to publish your code additions!",
-                "Explore a new tech, even if just for funsies.",
-                "Always check your syntax.",
-                "Remember, We all start somewhere.",
-                "What do we think of vibe-coding chat?",
-                "Ever consider trying Arch Linux?",
-                "Limit your anime obsession.",
-                "Also try Dr. Pepper!",
-                "You should totally get a cool watch.",
-                "A Thinkpad with Linux will fulfill you.",
-                "Grab a beer!",
-                "You should make a website too!",
-                "Get a job to support your hobbies.",
-                "Being edgy != cool.",
-                "Sometimes, Observing is key.",
-                "Document your code."
-            ];
-            const funStats = [
-                "1337",
-                "I'm so booooored!",
-                "Zen is my daily-use browser.",
-                "This domain costs me 6 euros.",
-                "Your browser is probably cooler.",
-                "LeetSpeek is awesome!",
-                "I'm an alcoholic!",
-                "Github is a great tool.",
-                "You're being monitored rn!",
-                "I'm pretty cool tbh.",
-                "I like Pringles.",
-                "Cameras everywhere!",
-                "Ctrl+C/V is magic."
-            ];
-
-            if(tipElement) tipElement.textContent = dailyTips[Math.floor(Math.random()*dailyTips.length)];
-            if(funElement) funElement.textContent = funStats[Math.floor(Math.random()*funStats.length)];
-        });
-        </script>
-
-        
-        <!-- ======================= -->
-        <!--  BIRTHDAY EVENT SCRIPT -->
-        <!-- ======================= -->
-        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const myBirthday = "11-22"; // MM-DD
-            const today = new Date();
-            const mm = String(today.getMonth() + 1).padStart(2, '0');
-            const dd = String(today.getDate()).padStart(2, '0');
-            const current = `${mm}-${dd}`;
-
-            if (current === myBirthday) {
-                alert("Happy Birthday, pkw! :3");
-                confetti({ particleCount: 250, spread: 90, origin: { y: 0 } });
-            }
-        });
-        </script>
-        <!-- ===== END BIRTHDAY EVENT ===== -->
-
-    </div>
-</body>
+<!-- Combined Stats Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const counterElement = document.getElementById('visitor-counter');
+const visitStatusElement = document.getElementById('first-visit-status');
+const visitCountElement = document.getElementById('visit-count');
+const screenSizeElement = document.getElementById('screen-size');
+const osTypeElement = document.getElementById('os-type');
+const favoriteSectionElement = document.getElementById('favorite-section');
+const tipElement = document.getElementById('daily-tip');
+const funElement = document.getElementById('fun-stat');
+let sectionClicks = { home: 0, experience: 0, projects: 0, skills: 0, stats: 0 };
+if (typeof(Storage) !== "undefined") {
+let visitCount = localStorage.getItem('visitCount') || 0;
+visitCount = parseInt(visitCount) + 1;
+localStorage.setItem('visitCount', visitCount);
+if (visitCountElement) visitCountElement.textContent = visitCount;
+const hasVisited = localStorage.getItem('hasVisitedBefore');
+if (!hasVisited) {
+localStorage.setItem('hasVisitedBefore', 'true');
+if (visitStatusElement) visitStatusElement.textContent = 'true';
+} else {
+if (visitStatusElement) visitStatusElement.textContent = 'false';
+}
+const savedClicks = localStorage.getItem('sectionClicks');
+if (savedClicks) { sectionClicks = JSON.parse(savedClicks); updateFavoriteSection(); }
+document.querySelectorAll('.container').forEach(section => {
+section.addEventListener('click', function() {
+const sectionId = this.id;
+if (sectionClicks[sectionId] !== undefined) {
+sectionClicks[sectionId]++;
+localStorage.setItem('sectionClicks', JSON.stringify(sectionClicks));
+updateFavoriteSection();
+}
+});
+});
+} else {
+if (visitStatusElement) visitStatusElement.textContent = 'Unknown';
+if (visitCountElement) visitCountElement.textContent = '1';
+}
+function updateFavoriteSection() {
+let maxClicks = 0, favorite = 'None yet';
+for (const [section, clicks] of Object.entries(sectionClicks)) {
+if (clicks > maxClicks) { maxClicks = clicks; favorite = section.charAt(0).toUpperCase() + section.slice(1); }
+}
+if (favoriteSectionElement && maxClicks > 0) favoriteSectionElement.textContent = favorite;
+}
+if (screenSizeElement) screenSizeElement.textContent = `${screen.width}x${screen.height}`;
+if (osTypeElement) {
+const userAgent = navigator.userAgent; let os = 'Unknown';
+if (userAgent.includes('Win')) os = 'Windows';
 </html>
