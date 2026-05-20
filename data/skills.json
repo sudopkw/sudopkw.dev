@@ -55,7 +55,8 @@
       "content": [
         "Yeah, I kept this one in here because it’s too funny not to.",
         "I’m fluent in {{English}} (shocker), {{Croatian}}, and can read/write in {{Cyrillic Script}}.",
-        "I studied a bit of {{Russian}}, and while I can understand it decently... speaking it? Yeah, not happening. Lmao."
+        "I studied a bit of {{Russian}}, and while I can understand it decently... speaking it? Yeah, not happening. Lmao.",
+        "I like to throw around some Blasphemies and common swears in {{Italian}} Too, so that's always fun."
       ],
       "snippet": null
     },
@@ -65,7 +66,7 @@
         "Neovim is a {{keyboard-driven text editor}} built off Vim, supporting {{multiple modes}} like {{Normal}}, {{Visual}}, and {{Insert}}.",
         "It’s insanely {{customizable}} with {{Lua scripting}} and has a massive community making extensions.",
         "I started using it in mid {{2023}} and still have lots to {{learn}} — {{buffers}}, {{navigation}}, and more.",
-        "But I use it for {{everything}} now, and I feel right at home in it. I even wrote a small extension for better {{npm debugging}}.",
+        "But I use it for {{everything}} now, and I feel right at home in it.",
         "(Also, yeah — it’s a total {{flex}} on other devs.)"
       ],
       "snippet": null
