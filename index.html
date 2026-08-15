@@ -1,7 +1,8 @@
 <!Doctype html>
-<html lang="en">
+<html lang="en"> 
 
 <head>
+    <!-- Your existing head content remains the same -->
     <meta name="0cred-id" content="01e24af6-ad8e-4de9-9cb4-fe625eb96ab1" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -33,178 +34,151 @@
 
     <link href="images/favicon-light.ico" rel="icon" media="(prefers-color-scheme: light)" />
     <link href="images/favicon-dark.ico" rel="icon" media="(prefers-color-scheme: dark)" />
-
-    <link rel="preload" as="font"
-        href="fonts/fira-mono-v14-latin-regular.woff2"
-        type="font/otf"
+    <link rel="preload" as="font" href="fonts/fira-mono-v14-latin-regular.woff2" type="font/otf"
         crossorigin="anonymous">
-
-    <link rel="preload" as="font"
-        href="fonts/fira-mono-v14-latin-700.woff2"
-        type="font/otf"
-        crossorigin="anonymous">
-
-    <link id="min-style"
-        rel="stylesheet"
-        type="text/css"
-        href="css/tui.min.css">
-
+    <link rel="preload" as="font" href="fonts/fira-mono-v14-latin-700.woff2" type="font/otf" crossorigin="anonymous">
+    <link id="min-style" rel="stylesheet" type="text/css" href="css/tui.min.css">
     <script src="js/loader/loader.js"></script>
-
     <title>sudopkw</title>
-
+    
     <!-- Birthday celebration styles -->
     <style>
-        /* Confetti container */
-        #confetti-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1000;
-        }
+       /* Confetti container */
+#confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
 
-        /* Birthday popup modal */
-        #birthday-popup {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: var(--clr-primary-bg);
-            border: 1px solid var(--clr-primary-txt);
-            border-radius: 1px;
-            padding: 20px;
-            z-index: 1001;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-            max-width: 400px;
-            width: 90%;
-            font-family: 'Fira Mono', monospace;
-            color: var(--clr-primary-txt);
-        }
+/* Birthday popup modal */
+#birthday-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--clr-primary-bg);
+    border: 1px solid var(--clr-primary-txt);
+    border-radius: 1px;
+    padding: 20px;
+    z-index: 1001;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 90%;
+    font-family: 'Fira Mono', monospace;
+    color: var(--clr-primary-txt);
+}
 
-        #birthday-popup h2 {
-            color: var(--clr-blue);
-            margin-top: 0;
-            font-size: 1.5rem;
-        }
+#birthday-popup h2 {
+    color: var(--clr-blue);
+    margin-top: 0;
+    font-size: 1.5rem;
+}
 
-        #birthday-popup p {
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
+#birthday-popup p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
 
-        #birthday-popup button {
-            background-color: var(--clr-secondary-bg);
-            color: var(--clr-primary-txt);
-            border: none;
-            border-radius: 0px;
-            padding: 10px 20px;
-            font-family: 'Fira Mono', monospace;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
+#birthday-popup button {
+    background-color: var(--clr-secondary-bg);
+    color: var(--clr-primary-txt);
+    border: none;
+    border-radius: 0px;
+    padding: 10px 20px;
+    font-family: 'Fira Mono', monospace;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
 
-        #birthday-popup button:hover {
-            background-color: var(--clr-border);
-        }
+#birthday-popup button:hover {
+    background-color: var(--clr-border);
+}
 
-        /* Confetti pieces */
-        .confetti {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: var(--clr-blue);
-            opacity: 0.8;
-            top: -10px;
-        }
+/* Confetti pieces */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--clr-blue);
+    opacity: 0.8;
+    top: -10px;
+}
 
-        /* Overlay for the popup */
-        #popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-        }
+/* Overlay for the popup */
+#popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
 
-        /* Mobile adjustments */
-        @media screen and (max-width: 768px) {
-            #birthday-popup {
-                max-width: 85%;
-                width: 80%;
-                padding: 15px;
-                margin-top: 50px;
-            }
+/* Mobile adjustments - matches your website's breakpoint */
+@media screen and (max-width: 768px) {
+    #birthday-popup {
+        max-width: 85%;
+        width: 80%;
+        padding: 15px;
+        margin-top: 50px; /* Account for fixed navbar */
+    }
+    
+    #birthday-popup h2 {
+        font-size: 1.3rem;
+        line-height: 1.3;
+    }
+    
+    #birthday-popup p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+    
+    #birthday-popup button {
+        padding: 12px 24px;
+        font-size: 1rem;
+        width: 100%; /* Full width on mobile */
+    }
+}
 
-            #birthday-popup h2 {
-                font-size: 1.3rem;
-                line-height: 1.3;
-            }
-
-            #birthday-popup p {
-                font-size: 1rem;
-                margin-bottom: 15px;
-                line-height: 1.4;
-            }
-
-            #birthday-popup button {
-                padding: 12px 24px;
-                font-size: 1rem;
-                width: 100%;
-            }
-        }
-
-        /* Extra small mobile adjustments */
-        @media screen and (max-width: 480px) {
-            #birthday-popup {
-                max-width: 90%;
-                width: 85%;
-                padding: 12px;
-                margin-top: 40px;
-            }
-
-            #birthday-popup h2 {
-                font-size: 1.1rem;
-            }
-
-            #birthday-popup p {
-                font-size: 0.9rem;
-                margin-bottom: 12px;
-            }
-
-            #birthday-popup button {
-                padding: 10px 20px;
-                font-size: 0.9rem;
-            }
-        }
+/* Extra small mobile adjustments */
+@media screen and (max-width: 480px) {
+    #birthday-popup {
+        max-width: 90%;
+        width: 85%;
+        padding: 12px;
+        margin-top: 40px;
+    }
+    
+    #birthday-popup h2 {
+        font-size: 1.1rem;
+    }
+    
+    #birthday-popup p {
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+    }
+    
+    #birthday-popup button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
     </style>
 </head>
 
 <body class="darkmode">
-
     <div id="main-container">
-
+        <!-- Your existing content remains the same -->
         <div class="nav-container">
-            <img
-                id="nav-logo"
-                loading="eager"
-                src="images/logo2.svg"
-                alt="sudopkw"
-                decoding="async"
-            />
-
+            <img id="nav-logo" loading="eager" src="images/logo2.svg" alt="sudopkw" decoding="async" />
             <div id="hamburger-menu">
-                <input
-                    class="checkbox"
-                    type="checkbox"
-                    name="hamburger-toggle"
-                    aria-label="Mobile menu toggle"
-                />
-
+                <input class="checkbox" type="checkbox" name="hamburger-toggle" aria-label="Mobile menu toggle" />
                 <div class="hamburger-lines">
                     <span class="line line1"></span>
                     <span class="line line2"></span>
@@ -212,1069 +186,458 @@
                 </div>
             </div>
         </div>
-
         <div id="section-container">
-
             <div id="left-section">
-
                 <header class="container selected-frame" id="home">
                     <div class="container-content">
-
                         <div class="title decorating-text">
-                            <p>Home</p>
+                            <p>
+                                Home
+                            </p>
                             <div></div>
                         </div>
-
-                        <p id="home-section-paragraph"></p>
-
+                        <p id="home-section-paragraph">
+                            Hiya, I'm <span class="text-olive">sudopkw</span> !
+                        </p>
                         <p id="mobile-help">
-                            <span class="text-orange">Press</span>
-                            around to
-                            <span class="text-orange">explore</span>
+                            <span class="text-orange">Press</span> around to <span class="text-orange">explore</span>
                             the website.
                         </p>
-
                     </div>
                 </header>
-
                 <div class="container" id="experience">
                     <div class="container-content">
-
                         <div id="experience-title" class="title decorating-text">
-                            <p>Experience</p>
+                            <p>
+                                Experience
+                            </p>
                             <div></div>
                         </div>
-
                         <div id="experience-index" class="list-index decorating-text">
                             <p>1 of 3</p>
                             <div></div>
                         </div>
-
                         <div class="ui-list">
                             <div>
                                 <div>Lua Alchemist & Failure</div>
                                 <div>@ <span class="text-orange">None</span></div>
                             </div>
-
                             <div>
                                 <div>Python Stomper</div>
                                 <div>@ <span class="text-orange">None</span></div>
                             </div>
-
                             <div>
                                 <div>Lua Wizard (Part 2?)</div>
                                 <div>@ <span class="text-orange">None</span></div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
                 <div class="container" id="projects">
                     <div class="container-content">
-
                         <div class="title decorating-text">
                             <p>Projects</p>
                             <div></div>
                         </div>
-
                         <div class="list-index decorating-text">
                             <p>1 of 3</p>
                             <div></div>
                         </div>
-
                         <div class="ui-list">
                             <div>PKW.FUN</div>
                             <div>Discord Self-Bot</div>
                             <div>sudopkw.dev</div>
                         </div>
-
                     </div>
                 </div>
-
                 <div class="container" id="skills">
                     <div class="container-content">
-
                         <div id="skills-title" class="title decorating-text">
-                            <p>Skills - Tools</p>
+                            <p>
+                                Skills - Tools
+                            </p>
                             <div></div>
                         </div>
-
                         <div id="skills-index" class="list-index decorating-text">
                             <p>1 of 7</p>
                             <div></div>
                         </div>
-
                         <div class="ui-list">
-                            <div>
-                                <img src="images/lua.svg" alt="" decoding="async" />
-                                Lua
-                            </div>
-
-                            <div>
-                                <img src="images/python.svg" alt="" decoding="async" />
-                                Python
-                            </div>
-
-                            <div>
-                                <img src="images/sql.svg" alt="" decoding="async" />
-                                SQL
-                            </div>
-
-                            <div>
-                                <img src="images/js.svg" alt="" decoding="async" />
-                                JavaScript
-                            </div>
-
-                            <div>
-                                <img src="images/linux.svg" alt="" decoding="async" />
-                                Linux
-                            </div>
-
-                            <div>
-                                <img src="images/lang.svg" alt="" decoding="async" />
-                                Human Languages
-                            </div>
-
-                            <div>
-                                <img src="images/neovim.svg" alt="" decoding="async" />
-                                Neovim
-                            </div>
+                            <div><img src="images/lua.svg" alt="" decoding="async" />Lua</div>
+                            <div><img src="images/python.svg" alt="" decoding="async" />Python</div>
+                            <div><img src="images/sql.svg" alt="" decoding="async" />SQL</div>
+                            <div><img src="images/js.svg" alt="" decoding="async" />JavaScript</div>
+                            <div><img src="images/linux.svg" alt="" decoding="async" />Linux</div>
+                            <div><img src="images/lang.svg" alt="" decoding="async" />Human Languages</div>
+                            <div><img src="images/neovim.svg" alt="" decoding="async" />Neovim</div>
                         </div>
-
                     </div>
                 </div>
-
-                <!-- STATS WIDGET -->
+                <!-- STATS WIDGET - Always visible -->
                 <div class="container" id="stats">
                     <div class="container-content">
-
                         <div class="title decorating-text">
                             <p>Stats</p>
                             <div></div>
                         </div>
-
                         <div class="ui-list">
-
                             <div>
                                 <div>Unique Visitors:</div>
-                                <div>
-                                    <span class="text-orange" id="visitor-counter">
-                                        Loading...
-                                    </span>
-                                </div>
+                                <div><span class="text-orange" id="visitor-counter">Loading...</span></div>
                             </div>
-
                             <div>
                                 <div>First-time Visitor:</div>
-                                <div>
-                                    <span class="text-orange" id="first-visit-status">
-                                        Checking...
-                                    </span>
-                                </div>
+                                <div><span class="text-orange" id="first-visit-status">Checking...</span></div>
                             </div>
-
                             <div>
                                 <div>Visit Count:</div>
-                                <div>
-                                    <span class="text-olive" id="visit-count">
-                                        1
-                                    </span>
-                                </div>
+                                <div><span class="text-olive" id="visit-count">1</span></div>
                             </div>
-
                             <div>
                                 <div>Screen Size:</div>
-                                <div>
-                                    <span class="text-orange" id="screen-size">
-                                        Loading...
-                                    </span>
-                                </div>
+                                <div><span class="text-orange" id="screen-size">Loading...</span></div>
                             </div>
-
                             <div>
                                 <div>Operating System:</div>
-                                <div>
-                                    <span class="text-orange" id="os-type">
-                                        Detecting...
-                                    </span>
-                                </div>
+                                <div><span class="text-orange" id="os-type">Detecting...</span></div>
                             </div>
-
                             <div>
                                 <div>Favorite Section:</div>
-                                <div>
-                                    <span class="text-olive" id="favorite-section">
-                                        None yet
-                                    </span>
-                                </div>
+                                <div><span class="text-olive" id="favorite-section">None yet</span></div>
                             </div>
-
+                            <!-- NEW STATS -->
                             <div>
                                 <div>Tip:</div>
-                                <div>
-                                    <span class="text-orange" id="daily-tip">
-                                        Loading...
-                                    </span>
-                                </div>
+                                <div><span class="text-orange" id="daily-tip">Loading...</span></div>
                             </div>
-
                             <div>
                                 <div>Fun Fact:</div>
-                                <div>
-                                    <span class="text-orange" id="fun-stat">
-                                        Loading...
-                                    </span>
-                                </div>
+                                <div><span class="text-orange" id="fun-stat">Loading...</span></div>
                             </div>
-
                         </div>
                     </div>
                 </div>
-
             </div>
-
             <div id="right-section">
-
                 <div class="container h-fill" id="main-content">
                     <div class="container-content">
-
                         <div id="logo-container">
-                            <img
-                                loading="eager"
-                                src="images/logo2.svg"
-                                id="logo"
-                                alt="sudopkw"
-                                decoding="async"
-                            />
+                            <img loading="eager" src="images/logo2.svg" id="logo" alt="sudopkw" decoding="async" />
                         </div>
-
                         <div class="outer-paragraph-container">
-                            <div
-                                class="inner-paragraph-container"
-                                id="home-content"
-                            >
-                                <!-- home.json is loaded here on page load -->
+                            <div class="inner-paragraph-container">
+                                <div>
+                                    <p>Hiya, I'm <span class="text-olive">sudopkw</span> - or just sudo / pkw, if you're in a hurry.</p>
+                                    <p>Mainly a <span class="text-orange">Coder</span> and <span class="text-orange">Gamer</span>, wired into both worlds.</p>
+                                </div>
+                                <div>
+                                    <p>I don't code as much these days, but when I do, I'm usually deep inside <span class="text-orange">Lua</span> - exploring and breaking things just to see how they tick.</p>
+                                    <p>I occasionally wander into <span class="text-orange">C++</span>, <span class="text-orange">JavaScript</span>, and a few other languages that catch my eye.</p>
+                                    <p><span class="text-orange">Python</span> still gets some love from me, though I plan to dive into <span class="text-orange">C</span> soon for some chaotic side projects that'll probably explode... but hey, that's half the fun.</p>
+                                </div>
+                                <div>
+                                    <p>I'm also itching to tinker more with real-world tech - cracking open gadgets, poking at <span class="text-orange">WiFi Deauthers</span>, and just generally seeing how far down the rabbit hole goes.</p>
+                                    <p>With a bit of free time (and maybe a shot of courage), I'll get back to learning the deeper layers of how things really work - that's the stuff that fuels me.</p>
+                                </div>
+                                <div>
+                                    <p>This whole site is part of my learning sandbox - inspecting the code, reverse-engineering how <span class="text-orange">JSON</span> and <span class="text-orange">JavaScript</span> dance together.</p>
+                                    <p>Totally not because I've got a thing for <span class="text-orange">TUI</span> setups... nope, definitely not that. ;)</p>
+                                    <p>Anyway, here's a few links if you're curious - nothing serious, just a few windows into my world. My <span class="text-orange">GitHub</span>'s down there too.</p>
+                                </div>
+                                <div>
+                                    <p>Yup, I'm a <span class="text-orange">Gamer</span> too. Feel free to swing by my <a href="https://steamcommunity.com/id/sudopkw/" target="_blank" class="text-olive">Steam</a> if you wanna add me or drop a comment on my wall.</p>
+                                    <p>You can also peek at my <a href="https://www.tiktok.com/@whoamipkw/" target="_blank" class="text-orange">TikTok</a> or check out what I'm vibing to on <a href="https://stats.fm/pkw/" target="_blank" class="text-olive">Spoti-Stats</a>.</p>
+                                    <p>And of course, my code lair - <a href="https://github.com/sudopkw/" target="_blank" class="text-orange">GitHub</a>.</p>
+                                </div>
+                                <div id="desktop-help">
+                                    <p><span class="text-orange">Click</span> a section on the left to dig into my <span class="text-olive">work</span> and past <span class="text-orange">experiences</span>.</p>
+                                    <p>You can also <span class="text-orange">navigate</span> with the <span class="text-olive">arrow keys</span> - or <span class="text-orange">Vim motions</span>, if you're one of us. <span class="text-olive">B)</span></p>
+                                </div>
+                                <p id="mobile-help">
+                                    <span class="text-orange">Press</span> the menu button at the top-right of the screen to start <span class="text-orange">exploring</span> the website.
+                                </p>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
             </div>
-
         </div>
-
         <footer class="container text-olive" id="footer">
-
             <div class="footer-item" id="footer-help">
                 &lt;pgup&gt;/&lt;pgdown&gt;: Scroll,
                 &lt;left&gt;/&lt;right&gt;: Switch section,
                 &lt;1-4&gt;: Jump to section,
                 &lt;up&gt;/&lt;down&gt;: Switch item
-
                 <span class="text-orange">
                     (or just use the mouse)
                 </span>
             </div>
-
             <div class="footer-item">
-
-                <a
-                    class="text-olive"
-                    href="https://github.com/sudopkw/"
-                    target="_blank"
-                >
+                <a class="text-olive" href="https://github.com/sudopkw/" target="_blank">
                     GitHub
                 </a>
-
-                <a
-                    class="text-orange"
-                    href="https://steamcommunity.com/id/sudopkw/"
-                    target="_blank"
-                >
+                <a class="text-orange" href="https://steamcommunity.com/id/sudopkw/" target="_blank">
                     Steam
                 </a>
-
-                <a
-                    class="text-orange"
-                    href="https://www.tiktok.com/@whoamipkw"
-                    target="_blank"
-                >
+                <a class="text-orange" href="https://www.tiktok.com/@whoamipkw" target="_blank">
                     Tiktok
                 </a>
-
-                <a
-                    class="text-olive"
-                    href="https://stats.fm/pkw"
-                    target="_blank"
-                >
+                <a class="text-olive" href="https://stats.fm/pkw" target="_blank">
                     SpotiStats
                 </a>
-
             </div>
-
         </footer>
-
     </div>
 
     <!-- Birthday celebration elements -->
-
     <div id="confetti-container"></div>
-
     <div id="popup-overlay" style="display: none;"></div>
-
     <div id="birthday-popup" style="display: none;">
-
         <h2>Hiya! It's my birthday today! 🎉</h2>
-
-        <p>
-            Thank you for visiting on this special day!
-        </p>
-
-        <button id="close-birthday-popup">
-            Happy birthday! B)
-        </button>
-
+        <p>Thank you for visiting on this special day!</p>
+        <button id="close-birthday-popup">Happy birthday! B)</button>
     </div>
 
-    <!-- Main JavaScript -->
+    <!-- Combined Stats Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-
-            /*
-             * ============================================================
-             * HOME.JSON
-             * ============================================================
-             *
-             * Load homepage content immediately when the DOM is ready.
-             *
-             * This is intentionally NOT attached to the navigation system.
-             * The content is fetched once on initial page load.
-             */
-
-            let homeContentLoaded = false;
-
-            function loadHomeContent() {
-
-                if (homeContentLoaded) {
-                    return;
-                }
-
-                homeContentLoaded = true;
-
-                fetch('home.json')
-                    .then(response => {
-
-                        if (!response.ok) {
-                            throw new Error(
-                                `Failed to load home.json: ${response.status}`
-                            );
-                        }
-
-                        return response.json();
-                    })
-
-                    .then(data => {
-
-                        const container =
-                            document.getElementById('home-content');
-
-                        if (!container) {
-                            console.error(
-                                'Home content container not found.'
-                            );
-                            return;
-                        }
-
-                        container.innerHTML = '';
-
-                        /*
-                         * Main homepage sections
-                         */
-                        if (Array.isArray(data.sections)) {
-
-                            data.sections.forEach(section => {
-
-                                const sectionElement =
-                                    document.createElement('div');
-
-                                if (Array.isArray(section)) {
-
-                                    section.forEach(text => {
-
-                                        const paragraph =
-                                            document.createElement('p');
-
-                                        paragraph.innerHTML = text;
-
-                                        sectionElement.appendChild(
-                                            paragraph
-                                        );
-                                    });
-
-                                } else {
-
-                                    const paragraph =
-                                        document.createElement('p');
-
-                                    paragraph.innerHTML = section;
-
-                                    sectionElement.appendChild(
-                                        paragraph
-                                    );
-                                }
-
-                                container.appendChild(sectionElement);
-                            });
-                        }
-
-                        /*
-                         * Desktop help
-                         */
-                        if (Array.isArray(data.desktopHelp)) {
-
-                            const desktopHelp =
-                                document.createElement('div');
-
-                            desktopHelp.id = 'desktop-help';
-
-                            data.desktopHelp.forEach(text => {
-
-                                const paragraph =
-                                    document.createElement('p');
-
-                                paragraph.innerHTML = text;
-
-                                desktopHelp.appendChild(paragraph);
-                            });
-
-                            container.appendChild(desktopHelp);
-                        }
-
-                        /*
-                         * Mobile help
-                         */
-                        if (data.mobileHelp) {
-
-                            const mobileHelp =
-                                document.createElement('p');
-
-                            mobileHelp.id = 'mobile-help';
-
-                            mobileHelp.innerHTML =
-                                data.mobileHelp;
-
-                            container.appendChild(mobileHelp);
-                        }
-
-                    })
-
-                    .catch(error => {
-
-                        homeContentLoaded = false;
-
-                        console.error(
-                            'Failed to load home.json:',
-                            error
-                        );
-
-                    });
-            }
-
-            /*
-             * IMPORTANT:
-             * Load home.json NOW.
-             *
-             * It does not wait for the Home section to be clicked.
-             */
-            loadHomeContent();
-
-
-            /*
-             * ============================================================
-             * STATS
-             * ============================================================
-             */
-
-            const counterElement =
-                document.getElementById('visitor-counter');
-
-            const visitStatusElement =
-                document.getElementById('first-visit-status');
-
-            const visitCountElement =
-                document.getElementById('visit-count');
-
-            const screenSizeElement =
-                document.getElementById('screen-size');
-
-            const osTypeElement =
-                document.getElementById('os-type');
-
-            const favoriteSectionElement =
-                document.getElementById('favorite-section');
-
-            const tipElement =
-                document.getElementById('daily-tip');
-
-            const funElement =
-                document.getElementById('fun-stat');
-
-
-            /*
-             * ============================================================
-             * BIRTHDAY
-             * ============================================================
-             */
-
-            const confettiContainer =
-                document.getElementById('confetti-container');
-
-            const birthdayPopup =
-                document.getElementById('birthday-popup');
-
-            const popupOverlay =
-                document.getElementById('popup-overlay');
-
-            const closeButton =
-                document.getElementById('close-birthday-popup');
-
-
-            /*
-             * ============================================================
-             * SECTION CLICK TRACKING
-             * ============================================================
-             */
-
-            let sectionClicks = {
-                home: 0,
-                experience: 0,
-                projects: 0,
-                skills: 0,
-                stats: 0
-            };
-
-
-            /*
-             * ============================================================
-             * LOCAL STORAGE
-             * ============================================================
-             */
-
-            if (typeof Storage !== "undefined") {
-
-                let visitCount =
-                    localStorage.getItem('visitCount') || 0;
-
-                visitCount = parseInt(visitCount) + 1;
-
-                localStorage.setItem(
-                    'visitCount',
-                    visitCount
-                );
-
-                if (visitCountElement) {
-                    visitCountElement.textContent =
-                        visitCount;
-                }
-
-
-                const hasVisited =
-                    localStorage.getItem('hasVisitedBefore');
-
-                if (!hasVisited) {
-
-                    localStorage.setItem(
-                        'hasVisitedBefore',
-                        'true'
-                    );
-
-                    if (visitStatusElement) {
-                        visitStatusElement.textContent =
-                            'true';
-                    }
-
-                } else {
-
-                    if (visitStatusElement) {
-                        visitStatusElement.textContent =
-                            'false';
-                    }
-                }
-
-
-                const savedClicks =
-                    localStorage.getItem('sectionClicks');
-
-                if (savedClicks) {
-
-                    sectionClicks =
-                        JSON.parse(savedClicks);
-
-                    updateFavoriteSection();
-                }
-
-
-                document
-                    .querySelectorAll('.container')
-                    .forEach(section => {
-
-                        section.addEventListener(
-                            'click',
-                            function () {
-
-                                const sectionId =
-                                    this.id;
-
-                                if (
-                                    sectionClicks[
-                                        sectionId
-                                    ] !== undefined
-                                ) {
-
-                                    sectionClicks[
-                                        sectionId
-                                    ]++;
-
-                                    localStorage.setItem(
-                                        'sectionClicks',
-                                        JSON.stringify(
-                                            sectionClicks
-                                        )
-                                    );
-
-                                    updateFavoriteSection();
-                                }
-                            }
-                        );
-                    });
-
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize all elements
+        const counterElement = document.getElementById('visitor-counter');
+        const visitStatusElement = document.getElementById('first-visit-status');
+        const visitCountElement = document.getElementById('visit-count');
+        const screenSizeElement = document.getElementById('screen-size');
+        const osTypeElement = document.getElementById('os-type');
+        const favoriteSectionElement = document.getElementById('favorite-section');
+        const tipElement = document.getElementById('daily-tip');
+        const funElement = document.getElementById('fun-stat');
+
+        // Birthday celebration elements
+        const confettiContainer = document.getElementById('confetti-container');
+        const birthdayPopup = document.getElementById('birthday-popup');
+        const popupOverlay = document.getElementById('popup-overlay');
+        const closeButton = document.getElementById('close-birthday-popup');
+
+        // Track section clicks for favorite section
+        let sectionClicks = {
+            home: 0,
+            experience: 0,
+            projects: 0,
+            skills: 0,
+            stats: 0
+        };
+
+        // Load previous data from localStorage
+        if (typeof(Storage) !== "undefined") {
+            let visitCount = localStorage.getItem('visitCount') || 0;
+            visitCount = parseInt(visitCount) + 1;
+            localStorage.setItem('visitCount', visitCount);
+            if (visitCountElement) visitCountElement.textContent = visitCount;
+
+            const hasVisited = localStorage.getItem('hasVisitedBefore');
+            if (!hasVisited) {
+                localStorage.setItem('hasVisitedBefore', 'true');
+                if (visitStatusElement) visitStatusElement.textContent = 'true';
             } else {
-
-                if (visitStatusElement) {
-                    visitStatusElement.textContent =
-                        'Unknown';
-                }
-
-                if (visitCountElement) {
-                    visitCountElement.textContent =
-                        '1';
-                }
+                if (visitStatusElement) visitStatusElement.textContent = 'false';
             }
 
+            const savedClicks = localStorage.getItem('sectionClicks');
+            if (savedClicks) {
+                sectionClicks = JSON.parse(savedClicks);
+                updateFavoriteSection();
+            }
 
-            /*
-             * ============================================================
-             * FAVORITE SECTION
-             * ============================================================
-             */
-
-            function updateFavoriteSection() {
-
-                let maxClicks = 0;
-                let favorite = 'None yet';
-
-                for (
-                    const [section, clicks]
-                    of Object.entries(sectionClicks)
-                ) {
-
-                    if (clicks > maxClicks) {
-
-                        maxClicks = clicks;
-
-                        favorite =
-                            section.charAt(0).toUpperCase() +
-                            section.slice(1);
+            document.querySelectorAll('.container').forEach(section => {
+                section.addEventListener('click', function() {
+                    const sectionId = this.id;
+                    if (sectionClicks[sectionId] !== undefined) {
+                        sectionClicks[sectionId]++;
+                        localStorage.setItem('sectionClicks', JSON.stringify(sectionClicks));
+                        updateFavoriteSection();
                     }
-                }
-
-                if (
-                    favoriteSectionElement &&
-                    maxClicks > 0
-                ) {
-
-                    favoriteSectionElement.textContent =
-                        favorite;
-                }
-            }
-
-
-            /*
-             * ============================================================
-             * SCREEN SIZE
-             * ============================================================
-             */
-
-            if (screenSizeElement) {
-
-                screenSizeElement.textContent =
-                    `${screen.width}x${screen.height}`;
-            }
-
-
-            /*
-             * ============================================================
-             * OPERATING SYSTEM
-             * ============================================================
-             */
-
-            if (osTypeElement) {
-
-                const userAgent =
-                    navigator.userAgent;
-
-                let os = 'Unknown';
-
-                if (userAgent.includes('Win')) {
-                    os = 'Windows';
-
-                } else if (userAgent.includes('Mac')) {
-                    os = 'macOS';
-
-                } else if (userAgent.includes('Linux')) {
-                    os = 'Linux';
-
-                } else if (userAgent.includes('Android')) {
-                    os = 'Android';
-
-                } else if (
-                    userAgent.includes('iOS') ||
-                    userAgent.includes('iPhone') ||
-                    userAgent.includes('iPad')
-                ) {
-                    os = 'iOS';
-                }
-
-                osTypeElement.textContent = os;
-            }
-
-
-            /*
-             * ============================================================
-             * VISITOR COUNTER
-             * ============================================================
-             */
-
-            if (counterElement) {
-
-                const API_URL =
-                    'https://sudopkw-github-io.vercel.app/api/visitor';
-
-                let visitorId =
-                    localStorage.getItem('visitor_id');
-
-                if (!visitorId) {
-
-                    visitorId =
-                        'visitor_' +
-                        crypto.randomUUID();
-
-                    localStorage.setItem(
-                        'visitor_id',
-                        visitorId
-                    );
-                }
-
-                fetch(API_URL, {
-
-                    method: 'POST',
-
-                    headers: {
-                        'Content-Type':
-                            'application/json'
-                    },
-
-                    body: JSON.stringify({
-                        visitorId: visitorId
-                    })
-
-                })
-
-                .then(response => {
-
-                    if (!response.ok) {
-                        throw new Error(
-                            `API error: ${response.status}`
-                        );
-                    }
-
-                    return response.json();
-                })
-
-                .then(data => {
-
-                    if (
-                        data &&
-                        data.count !== undefined
-                    ) {
-
-                        counterElement.textContent =
-                            data.count;
-
-                    } else {
-
-                        counterElement.textContent =
-                            'Error';
-                    }
-                })
-
-                .catch(error => {
-
-                    console.log(
-                        'Counter error:',
-                        error
-                    );
-
-                    counterElement.textContent =
-                        'Offline';
                 });
-            }
+            });
+        } else {
+            if (visitStatusElement) visitStatusElement.textContent = 'Unknown';
+            if (visitCountElement) visitCountElement.textContent = '1';
+        }
 
+        function updateFavoriteSection() {
+            let maxClicks = 0;
+            let favorite = 'None yet';
 
-            /*
-             * ============================================================
-             * DAILY TIPS / FUN FACTS
-             * ============================================================
-             */
-
-            const dailyTips = [
-                "Remember to take breaks while coding!",
-                "Try learning a new Lua function today.",
-                "Don't forget to publish your code additions!",
-                "Explore a new tech, even if just for funsies.",
-                "Always check your syntax. I've made that mistake plenty of times.",
-                "Remember, We all start somewhere. This is your time to start learning!",
-                "What do we think of vibe-coding chat?",
-                "Ever consider trying Arch Linux? ( i use Arch btw )",
-                "Limit your anime obsession, it's weird.",
-                "Also try Dr. Pepper!",
-                "You should totally get a cool watch.",
-                "A Thinkpad with Linux on it will fulfill your every wish and desire.",
-                "Grab a beer!",
-                "You should make a website too!",
-                "Get a j*b to support your hobbies.",
-                "Being edgy != 'Cool'",
-                "Sometimes, Observing is key.",
-                "Document your code, future-you will thank you.",
-                "1 larp sesh a day, keeps the normies away"
-            ];
-
-            const funStats = [
-                "1337",
-                "I'm so booooored!",
-                "Helium is my daily-use browser.",
-                "This domain costs me 6 euros a year, Get your own today!",
-                "Your browser is probably cooler than mine.",
-                "LeetSpeek is awesome!",
-                "I'm an alcoholic!",
-                "Github is a great tool.",
-                "You're most likely being monitored by the government right now!",
-                "I'm pretty fucking cool if i do say so myself.",
-                "I like Pringles.",
-                "There are cameras everywhere, watching your every move!",
-                "Did you know? Ctrl+C/Ctrl+V is magical.",
-                "SUPER is magical too!"
-            ];
-
-            if (tipElement) {
-
-                tipElement.textContent =
-                    dailyTips[
-                        Math.floor(
-                            Math.random() *
-                            dailyTips.length
-                        )
-                    ];
-            }
-
-            if (funElement) {
-
-                funElement.textContent =
-                    funStats[
-                        Math.floor(
-                            Math.random() *
-                            funStats.length
-                        )
-                    ];
-            }
-
-
-            /*
-             * ============================================================
-             * BIRTHDAY CHECK
-             * ============================================================
-             */
-
-            function checkBirthday() {
-
-                // November = 10 because JavaScript months are 0-indexed.
-                const birthdayMonth = 10;
-                const birthdayDay = 22;
-
-                const today = new Date();
-
-                const month =
-                    today.getMonth();
-
-                const day =
-                    today.getDate();
-
-                return (
-                    month === birthdayMonth &&
-                    day === birthdayDay
-                );
-            }
-
-
-            /*
-             * ============================================================
-             * CONFETTI
-             * ============================================================
-             */
-
-            function createConfetti() {
-
-                const colors = [
-                    '#58a6ff',
-                    '#f778ba',
-                    '#ff7b72',
-                    '#79c0ff',
-                    '#a5d6ff',
-                    '#d2a8ff'
-                ];
-
-                for (let i = 0; i < 150; i++) {
-
-                    const confetti =
-                        document.createElement('div');
-
-                    confetti.className =
-                        'confetti';
-
-                    confetti.style.left =
-                        Math.random() * 100 + 'vw';
-
-                    confetti.style.backgroundColor =
-                        colors[
-                            Math.floor(
-                                Math.random() *
-                                colors.length
-                            )
-                        ];
-
-                    confetti.style.width =
-                        Math.random() * 10 + 5 + 'px';
-
-                    confetti.style.height =
-                        Math.random() * 10 + 5 + 'px';
-
-                    confetti.style.borderRadius =
-                        Math.random() > 0.5
-                            ? '50%'
-                            : '0';
-
-
-                    const animation =
-                        confetti.animate(
-
-                            [
-                                {
-                                    transform:
-                                        'translateY(0) rotate(0deg)',
-                                    opacity: 1
-                                },
-
-                                {
-                                    transform:
-                                        `translateY(${window.innerHeight}px) rotate(${Math.random() * 360}deg)`,
-                                    opacity: 0
-                                }
-                            ],
-
-                            {
-                                duration:
-                                    Math.random() * 3000 + 2000,
-
-                                delay:
-                                    Math.random() * 2000
-                            }
-                        );
-
-
-                    confettiContainer.appendChild(
-                        confetti
-                    );
-
-
-                    animation.onfinish = () => {
-                        confetti.remove();
-                    };
+            for (const [section, clicks] of Object.entries(sectionClicks)) {
+                if (clicks > maxClicks) {
+                    maxClicks = clicks;
+                    favorite = section.charAt(0).toUpperCase() + section.slice(1);
                 }
             }
 
+            if (favoriteSectionElement && maxClicks > 0) {
+                favoriteSectionElement.textContent = favorite;
+            }
+        }
 
-            /*
-             * ============================================================
-             * BIRTHDAY POPUP
-             * ============================================================
-             */
+        if (screenSizeElement) {
+            screenSizeElement.textContent = `${screen.width}x${screen.height}`;
+        }
 
-            function showBirthdayPopup() {
+        if (osTypeElement) {
+            const userAgent = navigator.userAgent;
+            let os = 'Unknown';
 
-                popupOverlay.style.display =
-                    'block';
+            if (userAgent.includes('Win')) os = 'Windows';
+            else if (userAgent.includes('Mac')) os = 'macOS';
+            else if (userAgent.includes('Linux')) os = 'Linux';
+            else if (userAgent.includes('Android')) os = 'Android';
+            else if (userAgent.includes('iOS') || userAgent.includes('iPhone') || userAgent.includes('iPad')) os = 'iOS';
 
-                birthdayPopup.style.display =
-                    'block';
+            osTypeElement.textContent = os;
+        }
 
+        // Visitor counter
+        if (counterElement) {
+            const API_URL = 'https://sudopkw-github-io.vercel.app/api/visitor';
 
-                closeButton.addEventListener(
-                    'click',
-                    () => {
+            let visitorId = localStorage.getItem('visitor_id');
 
-                        popupOverlay.style.display =
-                            'none';
-
-                        birthdayPopup.style.display =
-                            'none';
-                    }
-                );
-
-
-                popupOverlay.addEventListener(
-                    'click',
-                    () => {
-
-                        popupOverlay.style.display =
-                            'none';
-
-                        birthdayPopup.style.display =
-                            'none';
-                    }
-                );
+            if (!visitorId) {
+                visitorId = 'visitor_' + crypto.randomUUID();
+                localStorage.setItem('visitor_id', visitorId);
             }
 
+            fetch(API_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    visitorId: visitorId
+                })
+            })
+            .then(response => {
+                if (!response.ok) throw new Error(`API error: ${response.status}`);
+                return response.json();
+            })
+            .then(data => {
+                if (data && data.count !== undefined) {
+                    counterElement.textContent = data.count;
+                } else {
+                    counterElement.textContent = 'Error';
+                }
+            })
+            .catch(error => {
+                console.log('Counter error:', error);
+                counterElement.textContent = 'Offline';
+            });
+        }
 
-            /*
-             * ============================================================
-             * START BIRTHDAY CELEBRATION
-             * ============================================================
-             */
+        const dailyTips = [
+            "Remember to take breaks while coding!",
+            "Try learning a new Lua function today.",
+            "Don't forget to publish your code additions!",
+            "Explore a new tech, even if just for funsies.",
+            "Always check your syntax. I've made that mistake plenty of times.",
+            "Remember, We all start somewhere. This is your time to start learning!",
+            "What do we think of vibe-coding chat?",
+            "Ever consider trying Arch Linux? ( i use Arch btw )",
+            "Limit your anime obsession, it's weird.",
+            "Also try Dr. Pepper!",
+            "You should totally get a cool watch.",
+            "A Thinkpad with Linux on it will fulfill your every wish and desire.",
+            "Grab a beer!",
+            "You should make a website too!",
+            "Get a j*b to support your hobbies.",
+            "Being edgy != 'Cool'",
+            "Sometimes, Observing is key.",
+            "Document your code, future-you will thank you.",
+            "1 larp sesh a day, keeps the normies away"
+        ];
+        const funStats = [
+            "1337",
+            "I'm so booooored!",
+            "Helium is my daily-use browser.",
+            "This domain costs me 6 euros a year, Get your own today!",
+            "Your browser is probably cooler than mine.",
+            "LeetSpeek is awesome!",
+            "I'm an alcoholic!",
+            "Github is a great tool.",
+            "You're most likely being monitored by the government right now!",
+            "I'm pretty fucking cool if i do say so myself.",
+            "I like Pringles.",
+            "There are cameras everywhere, watching your every move!",
+            "Did you know? Ctrl+C/Ctrl+V is magical.",
+            "SUPER is magical too!"
+        ];
 
-            if (checkBirthday()) {
+        if(tipElement) tipElement.textContent = dailyTips[Math.floor(Math.random()*dailyTips.length)];
+        if(funElement) funElement.textContent = funStats[Math.floor(Math.random()*funStats.length)];
 
-                createConfetti();
+        // Birthday celebration functionality
+        function checkBirthday() {
+            // Set your birthday date here (month is 0-indexed, so 0 = January, 11 = December)
+            const birthdayMonth = 10; // November (change this to your birth month)
+            const birthdayDay = 22;   // 15th (change this to your birth day)
+            
+            const today = new Date();
+            const month = today.getMonth();
+            const day = today.getDate();
+            
+            return (month === birthdayMonth && day === birthdayDay);
+        }
 
-                setTimeout(
-                    showBirthdayPopup,
-                    100
-                );
+        function createConfetti() {
+            const colors = ['#58a6ff', '#f778ba', '#ff7b72', '#79c0ff', '#a5d6ff', '#d2a8ff'];
+            
+            for (let i = 0; i < 150; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.width = Math.random() * 10 + 5 + 'px';
+                confetti.style.height = Math.random() * 10 + 5 + 'px';
+                confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+                
+                const animation = confetti.animate([
+                    { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+                    { transform: `translateY(${window.innerHeight}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+                ], {
+                    duration: Math.random() * 3000 + 2000,
+                    delay: Math.random() * 2000
+                });
+                
+                confettiContainer.appendChild(confetti);
+                
+                animation.onfinish = () => {
+                    confetti.remove();
+                };
             }
+        }
 
-        });
+        function showBirthdayPopup() {
+            popupOverlay.style.display = 'block';
+            birthdayPopup.style.display = 'block';
+            
+            // Add event listener to close button
+            closeButton.addEventListener('click', () => {
+                popupOverlay.style.display = 'none';
+                birthdayPopup.style.display = 'none';
+            });
+            
+            // Also close when clicking outside the popup
+            popupOverlay.addEventListener('click', () => {
+                popupOverlay.style.display = 'none';
+                birthdayPopup.style.display = 'none';
+            });
+        }
+
+        // Check if it's your birthday and trigger celebration
+        if (checkBirthday()) {
+            createConfetti();
+            // Show popup after a short delay
+            setTimeout(showBirthdayPopup, 100);
+        }
+    });
     </script>
-
 </body>
 </html>
