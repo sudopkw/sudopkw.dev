@@ -186,7 +186,7 @@ svg {
 }
 
 #left-section .container:hover:not(.selected-frame) {
-  border-color: var(--clr-brown);
+  border-color: var(--clr-bg-alt);
 }
 
 .container-content {
