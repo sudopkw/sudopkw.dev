@@ -495,18 +495,28 @@
             osTypeElement.textContent = os;
         }
 
+        // Visitor counter
         if (counterElement) {
-            const API_URL = '/api/visitor';
+            const API_URL = 'https://sudopkw-github-io.vercel.app/api/visitor';
+
+            let visitorId = localStorage.getItem('visitor_id');
+
+            if (!visitorId) {
+                visitorId = 'visitor_' + crypto.randomUUID();
+                localStorage.setItem('visitor_id', visitorId);
+            }
 
             fetch(API_URL, {
-             method: 'POST',
-               headers: {
-                 'Content-Type': 'application/json',
-               },
-              credentials: 'include'
-             })
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    visitorId: visitorId
+                })
+            })
             .then(response => {
-                if (!response.ok) throw new Error('API error');
+                if (!response.ok) throw new Error(`API error: ${response.status}`);
                 return response.json();
             })
             .then(data => {
