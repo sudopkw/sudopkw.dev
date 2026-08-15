@@ -13,7 +13,7 @@ const MAIN_CONTENT_SECTION = document
   .getElementById("main-content")
   ?.getElementsByClassName("container-content")[0];
 
-const COLORS = ["text-blue", "text-orange", "text-pink"];
+const COLORS = ["text-olive", "text-orange", "text-brown"];
 
 const left_sections = [
   { name: "home", section: HOME_SECTION, items: [] },

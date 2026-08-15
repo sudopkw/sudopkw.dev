@@ -46,7 +46,7 @@
         "I’ve been using Linux for {{2–3 years}} and feel right at home with it. Tried lots of {{distros}}, but I always return to {{Arch-based}} ones.",
         "It’s {{free}}, {{stable}}, {{customizable}}, and {{powerful}} — easily my favorite {{development environment}}.",
         "I run {{Linux}} as my daily driver. If you’re curious, I’m currently using <a href=\"https://omarchy.org/\" target=\"_blank\" class=\"text-orange\">OMARCHY</a>, an {{Arch-based distro}} with {{Hyprland}} by default and tons of {{TUI elements}}.",
-        "It’s made by <a href=\"https://dhh.dk/\" target=\"_blank\" class=\"text-blue\">DHH</a>, so you know it’s built right."
+        "It’s made by <a href=\"https://dhh.dk/\" target=\"_blank\" class=\"text-olive\">DHH</a>, so you know it’s built right."
       ],
       "snippet": null
     },

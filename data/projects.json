@@ -29,7 +29,7 @@
         "Wild, right? {{This website}} itself is one of my projects - built as a way to understand {{SQL}}, {{HTML}}, and {{CSS}} better.",
         "I don’t really see myself going into full web dev, but it was a {{fun experiment}} to {{learn something new}} and {{explore other languages}} :D",
         "I’ll keep {{updating}} this site as I {{learn}} more and {{grow}} in other areas. Hopefully, it’ll be stacked with new projects and experiences soon :)",
-        "Also, Big thanks to {{Arthur Wallendorff}} for letting people (including me) use and modify his <a href=\"https://github.com/zyriab/portfolio\" target=\"_blank\" class=\"text-pink\">WallenArt GitHub</a> as a base to {{learn}} and {{improve skills}}.",
+        "Also, Big thanks to {{Arthur Wallendorff}} for letting people (including me) use and modify his <a href=\"https://github.com/zyriab/portfolio\" target=\"_blank\" class=\"text-orange\">WallenArt GitHub</a> as a base to {{learn}} and {{improve skills}}.",
         "If I ever make my own site from scratch, it’ll be {{heavily inspired}} by this one. I’m obsessed with {{TUI}} design - can’t believe something so sleek exists."
       ],
       "technologies": ["SQL", "JavaScript", "HTML", "CSS", "JSON"]
