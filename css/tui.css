@@ -66,23 +66,23 @@ body {
 }
 
 .darkmode {
-  background-color: var(--clr-primary-bg);
-  color: var(--clr-primary-txt);
+  background-color: var(--clr-bg);
+  color: var(--clr-fg);
 }
-
 
 *::-webkit-scrollbar {
   width: 0.4em;
-  background-color: var(--clr-primary-bg);
+  background-color: var(--clr-bg);
   height: 0.2em;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: var(--clr-primary-txt);
+  background-color: var(--clr-fg);
 }
+
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--clr-primary-txt) var(--clr-primary-bg);
+  scrollbar-color: var(--clr-fg) var(--clr-bg);
 }
 
 svg {
@@ -179,7 +179,7 @@ svg {
 .container {
   display: flex;
   flex-direction: column;
-  border: 0.1px solid var(--clr-primary-txt);
+  border: 0.1px solid var(--clr-fg);
   position: relative;
   padding-top: 0.2rem;
   height: 29%;
@@ -218,14 +218,14 @@ svg {
   justify-content: center;
   width: 70%;
   padding: 0.5rem;
-  border: 0.1px solid var(--clr-light-blue);
+  border: 0.1px solid var(--clr-border);
 }
 
 .project-image {
   margin: 0.5rem;
   width: 100%;
   max-width: fit-content;
-  background-color: var(--clr-secondary-bg);
+  background-color: var(--clr-bg-alt);
 }
 
 pre {
@@ -234,8 +234,8 @@ pre {
   font-size: 0.8rem;
   line-height: 1.2rem;
   padding: 0.5rem;
-  border: 0.1px solid var(--clr-light-blue);
-  color: var(--clr-primary-txt);
+  border: 0.1px solid var(--clr-border);
+  color: var(--clr-fg);
   overflow-x: scroll;
 }
 
@@ -281,7 +281,7 @@ pre {
 .decorating-text div {
   position: relative;
   z-index: 1;
-  background-color: var(--clr-primary-bg);
+  background-color: var(--clr-bg);
   height: 0.5ch;
   top: -1ch;
   left: -2px;
@@ -393,8 +393,8 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
 .project-button {
   all: unset;
   padding: 0.5rem 1rem;
-  border: 0.1px solid var(--clr-primary-txt);
-  color: var(--clr-primary-txt);
+  border: 0.1px solid var(--clr-fg);
+  color: var(--clr-fg);
   cursor: pointer;
   min-width: 150px;
   text-align: center;
@@ -402,7 +402,7 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
 }
 
 .project-button:hover {
-  background-color: var(--clr-secondary-bg);
+  background-color: var(--clr-bg-alt);
 }
 
 .project-button:active {
@@ -545,7 +545,7 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
     padding: 0 5vw;
     width: 100vw;
     height: 110px;
-    background-color: var(--clr-primary-bg);
+    background-color: var(--clr-bg);
     opacity: 0.9;
     z-index: 98;
   }
@@ -595,7 +595,7 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
     display: block;
     height: 4px;
     width: 100%;
-    border: 0.1px solid var(--clr-primary-txt);
+    border: 0.1px solid var(--clr-fg);
   }
 
   .nav-container .hamburger-lines .line1 {
@@ -620,7 +620,7 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
     left: 1.5vw;
     transition: transform 0.5s ease-in-out;
     z-index: 99;
-    background-color: var(--clr-primary-bg);
+    background-color: var(--clr-bg);
   }
 
   .menu-open {
