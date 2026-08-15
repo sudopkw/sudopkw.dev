@@ -6,8 +6,8 @@
       "year": 2025,
       "demoUrl": "none",
       "content": [
-        "A meh, {{mostly useless multi-tool}} that just opens a bunch of {{web pages}} I use - plus a DDoS tool that {{probably doesn’t even work}} because, y’know, cool factor.",
-        "The project’s {{unfinished}}, and a bunch of features aren’t even coded. I {{gave it up}} because I got bored and wanted to step away from {{Python}} for a while."
+        "{{useless multi-tool}} that just opens a bunch of {{web pages}} I use - plus a DDoS tool that {{probably doesn’t even work}} because, y’know",
+        "The project’s {{unfinished}}, and a bunch of features {{aren’t even coded}}, I never finished it and {{never will}} because I got bored, and {{it has no purpose}}"
       ],
       "technologies": ["Python", "JSON"]
     },
@@ -16,8 +16,8 @@
       "year": 2023,
       "demoUrl": "https://github.com/sudopkw/Alt-Bot",
       "content": [
-        "A fun little {{Discord self-bot}} I built - now completely {{broken}}, and the only fix would be to {{recode it}} into a proper {{Discord Bot}}.",
-        "I actually did that once, but... I {{lost the files}}. Classic me. So yeah, this project’s dead and buried - probably won’t make another one, ecsdi."
+        "A fun little {{Discord self-bot}} I built - now completely {{broken}}, and the only fix would be to {{recode it}} into a proper {{Discord Bot}}",
+        "I actually did that once, but.. I {{lost the files}}. Classic me. So yeah, this project’s dead - probably won’t make another one"
       ],
       "technologies": ["Python", "JSON", "Discord API"]
     },
@@ -27,12 +27,21 @@
       "demoUrl": "https://github.com/sudopkw/sudopkw.github.io",
       "content": [
         "Wild, right? {{This website}} itself is one of my projects - built as a way to understand {{SQL}}, {{HTML}}, and {{CSS}} better.",
-        "I don’t really see myself going into full web dev, but it was a {{fun experiment}} to {{learn something new}} and {{explore other languages}} :D",
-        "I’ll keep {{updating}} this site as I {{learn}} more and {{grow}} in other areas. Hopefully, it’ll be stacked with new projects and experiences soon :)",
-        "Also, Big thanks to {{Arthur Wallendorff}} for letting people (including me) use and modify his <a href=\"https://github.com/zyriab/portfolio\" target=\"_blank\" class=\"text-orange\">WallenArt GitHub</a> as a base to {{learn}} and {{improve skills}}.",
-        "If I ever make my own site from scratch, it’ll be {{heavily inspired}} by this one. I’m obsessed with {{TUI}} design - can’t believe something so sleek exists."
+        "I don’t really see myself going into web development, but it was a {{fun experiment}}",
+        "I’ll (probably) keep {{updating}} this site as I {{learn}} more",
+        "Also, Big thanks to {{Arthur Wallendorff}} for letting people (including me) use and modify his {{Wallenart portfolio}} as a base to {{learn}} and {{improve skills}}"
       ],
       "technologies": ["SQL", "JavaScript", "HTML", "CSS", "JSON"]
+    },
+    {
+      "name": "My own fish config",
+      "year": 2026,
+      "demoUrl": "https://github.com/sudopkw/fish-config-backup"
+      "content": [
+        "A {{config}} for the {{fish}} shell",
+        "made by {{yours truly}}, as a result of {{too much free time}} on my hands",
+        "it's a {{900-something}} line config that does a bunch of {{useless shit}}, despite providing SOME useful things"
+      ]
     }
   ]
 }
