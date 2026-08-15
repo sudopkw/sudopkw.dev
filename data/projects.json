@@ -41,7 +41,8 @@
         "A {{config}} for the {{fish}} shell",
         "made by {{yours truly}}, as a result of {{too much free time}} on my hands",
         "it's a {{900-something}} line config that does a bunch of {{useless shit}}, despite providing SOME useful things"
-      ]
+      ],
+      "technologies": ["BASH"]
     }
   ]
 }
