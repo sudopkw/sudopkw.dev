@@ -36,7 +36,7 @@
     {
       "name": "My own fish config",
       "year": 2026,
-      "demoUrl": "https://github.com/sudopkw/fish-config-backup"
+      "demoUrl": "https://github.com/sudopkw/fish-config-backup",
       "content": [
         "A {{config}} for the {{fish}} shell",
         "made by {{yours truly}}, as a result of {{too much free time}} on my hands",
