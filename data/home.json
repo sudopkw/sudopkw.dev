@@ -2,35 +2,22 @@
   "data": [
     {
       "content": [
-        "Hiya, I'm {{sudopkw}} - or just sudo / pkw, if you're in a hurry.",
-        "Mainly a {{Coder}} and {{Gamer}}, wired into both worlds."
+        "{{$ whoami}}",
+        " ",
+        "pkw",
+        " ",
+        "coder",
+        "professional linux glazer",
+        "tinkerer"
       ]
     },
     {
       "content": [
-        "I don’t code as much these days, but when I do, I’m usually deep inside {{Lua}} - exploring and breaking things just to see how they tick.",
-        "I occasionally wander into {{C++}}, {{JavaScript}}, and a few other languages that catch my eye.",
-        "{{Python}} still gets some love from me, though I plan to dive into {{C}} soon for some chaotic side projects that’ll probably explode... but hey, that’s half the fun."
-      ]
-    },
-    {
-      "content": [
-        "I’m also itching to tinker more with real-world tech - cracking open gadgets, poking at {{WiFi Deauthers}}, and just generally seeing how far down the rabbit hole goes.",
-        "With a bit of free time ({{and maybe a shot of courage}}), I’ll get back to learning the deeper layers of how things really work - that’s the stuff that fuels me."
-      ]
-    },
-    {
-      "content": [
-        "This whole site is part of my learning sandbox - inspecting the code, reverse-engineering how {{JSON}} and {{JavaScript}} dance together.",
-        "Totally not because I’ve got a thing for {{TUI}} setups... nope, definitely not that. ;)",
-        "Anyway, here’s a few links if you’re curious - nothing serious, just a few windows into my world. My {{GitHub}}’s down there too."
-      ]
-    },
-    {
-      "content": [
-        "Yup, I’m a {{Gamer}} too as mentioned. Feel free to swing by my <a href=\"https://steamcommunity.com/id/sudopkw/\" target=\"_blank\" class=\"text-olive\">Steam</a> if you wanna add me or drop a comment on my wall.",
-        "You can also peek at my <a href=\"https://www.tiktok.com/@whoamipkw/\" target=\"_blank\" class=\"text-orange\">TikTok</a> or check out what I’m vibing to on <a href=\"https://stats.fm/pkw/\" target=\"_blank\" class=\"text-olive\">Spoti-Stats</a>.",
-        "And of course, my code lair - <a href=\"https://github.com/sudopkw/\" target=\"_blank\" class=\"text-orange\">GitHub</a>."
+        "currently:",
+        "   {{├─}} building shit",
+        "   {{├─}} breaking shit",
+        "   {{├─}} learning shit",
+        "   {{└─}} occasionally fixing the shit I broke"
       ]
     },
     {
