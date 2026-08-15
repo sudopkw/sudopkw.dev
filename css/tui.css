@@ -15,11 +15,12 @@
 }
 
 :root {
-  --clr-primary-txt: #c2c2b0;
   --clr-primary-bg: #222222;
   --clr-tertiary-bg: #333333;
-  --clr-secondary-bg: #78824b;
+  --clr-primary-txt: #c2c2b0;
+
   --clr-border: #5f5f4f;
+  --clr-secondary-bg: #78824b;
 
   --clr-orange: #c9a554;
   --clr-blue: #78824b;
