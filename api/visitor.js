@@ -3,118 +3,73 @@ import { Redis } from '@upstash/redis';
 const redis = Redis.fromEnv();
 
 export default async function handler(req, res) {
-  const allowedOrigins = [
-    'https://sudopkw.github.io',
-    'https://sudopkw.dev',
-    'https://www.sudopkw.dev'
-  ];
+    const allowedOrigins = [
+        'https://sudopkw.dev',
+        'https://www.sudopkw.dev',
+        'https://sudopkw.github.io'
+    ];
 
-  const origin = req.headers.origin;
+    const origin = req.headers.origin;
 
-  if (allowedOrigins.includes(origin)) {
-    res.setHeader('Access-Control-Allow-Origin', origin);
-  } else {
-    res.setHeader('Access-Control-Allow-Origin', 'https://sudopkw.dev');
-  }
-
-  res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Cookie');
-  res.setHeader('Access-Control-Allow-Credentials', 'true');
-
-  if (req.method === 'OPTIONS') {
-    return res.status(200).end();
-  }
-
-  try {
-    // Parse cookies safely
-    const cookieHeader = req.headers.cookie || '';
-    const cookies = {};
-
-    for (const cookie of cookieHeader.split(';')) {
-      const separatorIndex = cookie.indexOf('=');
-
-      if (separatorIndex === -1) continue;
-
-      const name = cookie.slice(0, separatorIndex).trim();
-      const value = cookie.slice(separatorIndex + 1).trim();
-
-      cookies[name] = decodeURIComponent(value);
+    if (allowedOrigins.includes(origin)) {
+        res.setHeader('Access-Control-Allow-Origin', origin);
     }
 
-    let visitorId = cookies.visitor_id;
-    let isNew = false;
+    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-    // Generate a visitor ID if this browser doesn't have one
-    if (!visitorId) {
-      visitorId = `visitor_${crypto.randomUUID()}`;
-      isNew = true;
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end();
     }
 
-    const visitorKey = `visitor:${visitorId}`;
-
-    /*
-     * SET NX is atomic:
-     *
-     * - If the visitor key doesn't exist, Redis creates it.
-     * - If it already exists, Redis does nothing.
-     *
-     * This prevents duplicate counting from simultaneous requests.
-     */
-    const wasCreated = await redis.set(
-      visitorKey,
-      '1',
-      {
-        nx: true
-      }
-    );
-
-    let count;
-
-    if (wasCreated) {
-      count = await redis.incr('unique_visitors_total');
-
-      console.log(`New unique visitor: ${visitorId}, total: ${count}`);
-      isNew = true;
-    } else {
-      count = await redis.get('unique_visitors_total') || 0;
-      count = parseInt(count, 10);
-
-      console.log(`Returning visitor: ${visitorId}, total: ${count}`);
-      isNew = false;
+    if (req.method !== 'POST') {
+        return res.status(405).json({
+            error: 'Method not allowed'
+        });
     }
 
-    /*
-     * Keep the visitor ID for one year.
-     *
-     * HttpOnly prevents client-side JavaScript from reading/modifying it.
-     * SameSite=None + Secure allows it to be sent to the API from sudopkw.dev.
-     */
-    if (!cookies.visitor_id) {
-      res.setHeader(
-        'Set-Cookie',
-        [
-          `visitor_id=${encodeURIComponent(visitorId)}`,
-          'Max-Age=31536000',
-          'Path=/',
-          'SameSite=None',
-          'Secure',
-          'HttpOnly'
-        ].join('; ')
-      );
+    try {
+        const { visitorId } = req.body || {};
+
+        if (!visitorId || typeof visitorId !== 'string') {
+            return res.status(400).json({
+                error: 'Missing visitor ID'
+            });
+        }
+
+        // Permanently remember this visitor.
+        const visitorKey = `visitor:${visitorId}`;
+
+        const alreadyCounted = await redis.get(visitorKey);
+
+        let count;
+
+        if (!alreadyCounted) {
+            count = await redis.incr('unique_visitors_total');
+
+            // Permanent record.
+            await redis.set(visitorKey, '1');
+
+            console.log(`New unique visitor: ${visitorId}, total: ${count}`);
+        } else {
+            count = await redis.get('unique_visitors_total') || 0;
+            count = parseInt(count, 10);
+
+            console.log(`Returning visitor: ${visitorId}, total: ${count}`);
+        }
+
+        return res.status(200).json({
+            count: count,
+            status: 'success',
+            isNew: !alreadyCounted
+        });
+
+    } catch (error) {
+        console.error('Redis error:', error);
+
+        return res.status(500).json({
+            error: 'Counter temporarily offline',
+            count: 0
+        });
     }
-
-    return res.status(200).json({
-      count,
-      status: 'success',
-      isNew
-    });
-
-  } catch (error) {
-    console.error('Redis error:', error);
-
-    return res.status(500).json({
-      error: 'Counter temporarily offline',
-      count: 0
-    });
-  }
 }
