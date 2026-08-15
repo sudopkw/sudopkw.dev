@@ -15,17 +15,27 @@
 }
 
 :root {
-  --clr-primary-bg: #222222;
-  --clr-tertiary-bg: #333333;
-  --clr-primary-txt: #c2c2b0;
+  /* Miasma */
+  --clr-bg: #222222;
+  --clr-bg-alt: #2d2d2d;
+  --clr-bg-select: #33352b;
 
-  --clr-border: #5f5f4f;
-  --clr-secondary-bg: #78824b;
+  --clr-fg: #c2c2b0;
+  --clr-fg-bright: #d7c483;
+  --clr-fg-dim: #8f8f7a;
 
-  --clr-orange: #c9a554;
-  --clr-blue: #78824b;
-  --clr-pink: #9f9f7c;
-  --clr-light-blue: #a5a58d;
+  --clr-green: #5f875f;
+  --clr-olive: #78824b;
+  --clr-yellow: #c9a554;
+  --clr-orange: #b36d43;
+  --clr-brown: #685742;
+  --clr-red: #685742;
+  --clr-magenta: #bb7744;
+
+  /* UI */
+  --clr-border: #5f875f;
+  --clr-accent: #78824b;
+  --clr-accent-bright: #c9a554;
 }
 
 * {
@@ -353,12 +363,12 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
   color: var(--clr-orange);
 }
 
-.text-blue {
-  color: var(--clr-blue);
+.text-olive {
+  color: var(--clr-olive);
 }
 
-.text-pink {
-  color: var(--clr-pink);
+.text-brown {
+  color: var(--clr-brown);
 }
 
 .text-xs {
