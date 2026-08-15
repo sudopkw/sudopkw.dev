@@ -339,11 +339,11 @@ pre {
 }
 
 .selected-frame {
-  border-color: var(--clr-border);
+  border-color: var(--clr-accent);
 }
 
 .selected-frame .decorating-text {
-  color: var(--clr-accent);
+  color: var(--clr-brown);
 }
 
 .selected-frame .container-content {
