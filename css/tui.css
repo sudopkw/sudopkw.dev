@@ -60,9 +60,6 @@ body {
   color: var(--clr-primary-txt);
 }
 
-.bible-verse {
-    display: none;
-}
 
 *::-webkit-scrollbar {
   width: 0.4em;
@@ -368,40 +365,6 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
   font-size: 0.6rem;
 }
 
-.bible-verse {
-  margin-top: 2rem;
-  font-style: italic;
-  padding: 0.5rem 2rem;
-  border: 0.1px solid var(--clr-blue);
-  display: flex;
-  flex-direction: column;
-  width: 60vw;
-  position: relative;
-}
-
-.bible-verse > button {
-  all: unset;
-  cursor: pointer;
-  padding: 0.5rem;
-  width: 16px;
-  aspect-ratio: 1/1;
-
-  position: absolute;
-  top: -1.5rem;
-  left: -1rem;
-  z-index: 10;
-  background-color: var(--clr-primary-txt);
-
-  mask: url(/images/reload.svg);
-  mask-repeat: no-repeat;
-}
-
-.reference {
-  font-size: 0.8rem;
-  font-weight: bold;
-  color: var(--clr-blue);
-}
-
 .technologies-row {
   display: flex;
   flex-direction: row;
@@ -559,10 +522,6 @@ div.selected-frame > ::-webkit-scrollbar-thumb {
 
   #footer-help {
     display: none;
-  }
-
-  .bible-verse {
-    width: initial;
   }
 
   /* NAVBAR */
