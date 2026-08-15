@@ -335,28 +335,28 @@ pre {
 }
 
 .ui-list div:hover:not(.selected-item):not(.selected-item > div) {
-  background-color: var(--clr-tertiary-bg);
+  background-color: var(--clr-bg-select);
 }
 
 .selected-frame {
-  border-color: var(--clr-light-blue);
+  border-color: var(--clr-border);
 }
 
 .selected-frame .decorating-text {
-  color: var(--clr-light-blue);
+  color: var(--clr-accent);
 }
 
 .selected-frame .container-content {
-  scrollbar-color: var(--clr-light-blue) var(--clr-primary-bg);
+  scrollbar-color: var(--clr-brown) var(--clr-bg);
 }
 
 div.selected-frame > ::-webkit-scrollbar-thumb {
-  background-color: var(--clr-light-blue);
+  background-color: var(--clr-bg-select);
 }
 
 .selected-item,
 .selected-item div {
-  background-color: var(--clr-secondary-bg);
+  background-color: var(--clr-bg-alt);
 }
 
 .text-orange {
