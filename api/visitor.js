@@ -1,79 +1,118 @@
-import { Redis } from '@upstash/redis'; 
+import { Redis } from '@upstash/redis';
 
 const redis = Redis.fromEnv();
 
 export default async function handler(req, res) {
-  // Set CORS headers - FIXED LINE BELOW
-  const allowedOrigins = ['https://sudopkw.github.io', 'https://sudopkw.dev', 'https://www.sudopkw.dev'];
+  const allowedOrigins = [
+    'https://sudopkw.github.io',
+    'https://sudopkw.dev',
+    'https://www.sudopkw.dev'
+  ];
+
   const origin = req.headers.origin;
-  
+
   if (allowedOrigins.includes(origin)) {
     res.setHeader('Access-Control-Allow-Origin', origin);
   } else {
     res.setHeader('Access-Control-Allow-Origin', 'https://sudopkw.dev');
   }
-  
+
   res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Cookie');
   res.setHeader('Access-Control-Allow-Credentials', 'true');
-  
-  // Handle OPTIONS for CORS preflight
+
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
   }
-  
+
   try {
-    // ... rest of your existing code remains the same ...
-    // Get visitor ID from cookie header
+    // Parse cookies safely
     const cookieHeader = req.headers.cookie || '';
-    const cookies = Object.fromEntries(
-      cookieHeader.split(';').map(c => c.trim().split('='))
-    );
-    const visitorId = cookies.visitor_id;
-    
-    let newVisitorId;
+    const cookies = {};
+
+    for (const cookie of cookieHeader.split(';')) {
+      const separatorIndex = cookie.indexOf('=');
+
+      if (separatorIndex === -1) continue;
+
+      const name = cookie.slice(0, separatorIndex).trim();
+      const value = cookie.slice(separatorIndex + 1).trim();
+
+      cookies[name] = decodeURIComponent(value);
+    }
+
+    let visitorId = cookies.visitor_id;
+    let isNew = false;
+
+    // Generate a visitor ID if this browser doesn't have one
     if (!visitorId) {
-      // Generate new visitor ID
-      newVisitorId = 'visitor_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+      visitorId = `visitor_${crypto.randomUUID()}`;
+      isNew = true;
     }
-    
-    const currentVisitorId = visitorId || newVisitorId;
-    const key = `visitor:${currentVisitorId}`; // No date - permanent!
-    
-    const alreadyCounted = await redis.get(key);
-    
+
+    const visitorKey = `visitor:${visitorId}`;
+
+    /*
+     * SET NX is atomic:
+     *
+     * - If the visitor key doesn't exist, Redis creates it.
+     * - If it already exists, Redis does nothing.
+     *
+     * This prevents duplicate counting from simultaneous requests.
+     */
+    const wasCreated = await redis.set(
+      visitorKey,
+      '1',
+      {
+        nx: true
+      }
+    );
+
     let count;
-    if (!alreadyCounted && currentVisitorId) {
-      // First visit EVER - increment total and mark as counted FOREVER
+
+    if (wasCreated) {
       count = await redis.incr('unique_visitors_total');
-      await redis.set(key, '1'); // No expiration - permanent!
-      console.log(`New unique visitor: ${currentVisitorId}, total: ${count}`);
+
+      console.log(`New unique visitor: ${visitorId}, total: ${count}`);
+      isNew = true;
     } else {
-      // Already counted - just get current total
       count = await redis.get('unique_visitors_total') || 0;
-      count = parseInt(count);
-      console.log(`Returning visitor: ${currentVisitorId}, total: ${count}`);
+      count = parseInt(count, 10);
+
+      console.log(`Returning visitor: ${visitorId}, total: ${count}`);
+      isNew = false;
     }
-    
-    // Prepare response
-    const responseData = { 
-      count: count,
-      status: 'success',
-      isNew: !alreadyCounted
-    };
-    
-    // Set visitor cookie for new visitors (30 days)
-    if (newVisitorId) {
-      res.setHeader('Set-Cookie', 
-        `visitor_id=${newVisitorId}; Max-Age=2592000; Path=/; SameSite=None; Secure`
+
+    /*
+     * Keep the visitor ID for one year.
+     *
+     * HttpOnly prevents client-side JavaScript from reading/modifying it.
+     * SameSite=None + Secure allows it to be sent to the API from sudopkw.dev.
+     */
+    if (!cookies.visitor_id) {
+      res.setHeader(
+        'Set-Cookie',
+        [
+          `visitor_id=${encodeURIComponent(visitorId)}`,
+          'Max-Age=31536000',
+          'Path=/',
+          'SameSite=None',
+          'Secure',
+          'HttpOnly'
+        ].join('; ')
       );
     }
-    
-    res.status(200).json(responseData);
-    
+
+    return res.status(200).json({
+      count,
+      status: 'success',
+      isNew
+    });
+
   } catch (error) {
     console.error('Redis error:', error);
-    res.status(500).json({ 
+
+    return res.status(500).json({
       error: 'Counter temporarily offline',
       count: 0
     });
