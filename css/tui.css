@@ -218,7 +218,7 @@ svg {
   justify-content: center;
   width: 70%;
   padding: 0.5rem;
-  border: 0.1px solid var(--clr-border);
+  border: 0.1px solid var(--clr-orange);
 }
 
 .project-image {
