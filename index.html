@@ -12,6 +12,7 @@
     <meta name="author" content="sudopkw" />
     <meta name="description"
         content="Hi, I'm sudopkw. Check out my work and get in touch over here. ;)" />
+
     <meta property="og:url" content="https://sudopkw.dev/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Hiya! I'm pkw...">
@@ -21,6 +22,7 @@
     <meta property="og:description"
         content="Hi, I'm sudopkw. Check out my work and get in touch over here ;)">
     <meta property="og:locale" content="en_US">
+
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="sudopkw - Coder & Gamer">
     <meta name="twitter:description"
@@ -28,143 +30,181 @@
     <meta name="twitter:image" content="/images/social-banner.jpg">
     <meta name="twitter:image:alt" content="sudopkw.dev">
     <meta name="twitter:site" content="@sudopkw">
+
     <link href="images/favicon-light.ico" rel="icon" media="(prefers-color-scheme: light)" />
     <link href="images/favicon-dark.ico" rel="icon" media="(prefers-color-scheme: dark)" />
-    <link rel="preload" as="font" href="fonts/fira-mono-v14-latin-regular.woff2" type="font/otf"
+
+    <link rel="preload" as="font"
+        href="fonts/fira-mono-v14-latin-regular.woff2"
+        type="font/otf"
         crossorigin="anonymous">
-    <link rel="preload" as="font" href="fonts/fira-mono-v14-latin-700.woff2" type="font/otf" crossorigin="anonymous">
-    <link id="min-style" rel="stylesheet" type="text/css" href="css/tui.min.css">
+
+    <link rel="preload" as="font"
+        href="fonts/fira-mono-v14-latin-700.woff2"
+        type="font/otf"
+        crossorigin="anonymous">
+
+    <link id="min-style"
+        rel="stylesheet"
+        type="text/css"
+        href="css/tui.min.css">
+
     <script src="js/loader/loader.js"></script>
+
     <title>sudopkw</title>
-   
+
     <!-- Birthday celebration styles -->
     <style>
-       /* Confetti container */
-#confetti-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1000;
-}
-/* Birthday popup modal */
-#birthday-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--clr-primary-bg);
-    border: 1px solid var(--clr-primary-txt);
-    border-radius: 1px;
-    padding: 20px;
-    z-index: 1001;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    max-width: 400px;
-    width: 90%;
-    font-family: 'Fira Mono', monospace;
-    color: var(--clr-primary-txt);
-}
-#birthday-popup h2 {
-    color: var(--clr-blue);
-    margin-top: 0;
-    font-size: 1.5rem;
-}
-#birthday-popup p {
-    margin-bottom: 20px;
-    line-height: 1.5;
-}
-#birthday-popup button {
-    background-color: var(--clr-secondary-bg);
-    color: var(--clr-primary-txt);
-    border: none;
-    border-radius: 0px;
-    padding: 10px 20px;
-    font-family: 'Fira Mono', monospace;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-#birthday-popup button:hover {
-    background-color: var(--clr-border);
-}
-/* Confetti pieces */
-.confetti {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: var(--clr-blue);
-    opacity: 0.8;
-    top: -10px;
-}
-/* Overlay for the popup */
-#popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-}
-/* Mobile adjustments - matches your website's breakpoint */
-@media screen and (max-width: 768px) {
-    #birthday-popup {
-        max-width: 85%;
-        width: 80%;
-        padding: 15px;
-        margin-top: 50px; /* Account for fixed navbar */
-    }
-   
-    #birthday-popup h2 {
-        font-size: 1.3rem;
-        line-height: 1.3;
-    }
-   
-    #birthday-popup p {
-        font-size: 1rem;
-        margin-bottom: 15px;
-        line-height: 1.4;
-    }
-   
-    #birthday-popup button {
-        padding: 12px 24px;
-        font-size: 1rem;
-        width: 100%; /* Full width on mobile */
-    }
-}
-/* Extra small mobile adjustments */
-@media screen and (max-width: 480px) {
-    #birthday-popup {
-        max-width: 90%;
-        width: 85%;
-        padding: 12px;
-        margin-top: 40px;
-    }
-   
-    #birthday-popup h2 {
-        font-size: 1.1rem;
-    }
-   
-    #birthday-popup p {
-        font-size: 0.9rem;
-        margin-bottom: 12px;
-    }
-   
-    #birthday-popup button {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-}
+        /* Confetti container */
+        #confetti-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        /* Birthday popup modal */
+        #birthday-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--clr-primary-bg);
+            border: 1px solid var(--clr-primary-txt);
+            border-radius: 1px;
+            padding: 20px;
+            z-index: 1001;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 90%;
+            font-family: 'Fira Mono', monospace;
+            color: var(--clr-primary-txt);
+        }
+
+        #birthday-popup h2 {
+            color: var(--clr-blue);
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        #birthday-popup p {
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        #birthday-popup button {
+            background-color: var(--clr-secondary-bg);
+            color: var(--clr-primary-txt);
+            border: none;
+            border-radius: 0px;
+            padding: 10px 20px;
+            font-family: 'Fira Mono', monospace;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        #birthday-popup button:hover {
+            background-color: var(--clr-border);
+        }
+
+        /* Confetti pieces */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: var(--clr-blue);
+            opacity: 0.8;
+            top: -10px;
+        }
+
+        /* Overlay for the popup */
+        #popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        /* Mobile adjustments */
+        @media screen and (max-width: 768px) {
+            #birthday-popup {
+                max-width: 85%;
+                width: 80%;
+                padding: 15px;
+                margin-top: 50px;
+            }
+
+            #birthday-popup h2 {
+                font-size: 1.3rem;
+                line-height: 1.3;
+            }
+
+            #birthday-popup p {
+                font-size: 1rem;
+                margin-bottom: 15px;
+                line-height: 1.4;
+            }
+
+            #birthday-popup button {
+                padding: 12px 24px;
+                font-size: 1rem;
+                width: 100%;
+            }
+        }
+
+        /* Extra small mobile adjustments */
+        @media screen and (max-width: 480px) {
+            #birthday-popup {
+                max-width: 90%;
+                width: 85%;
+                padding: 12px;
+                margin-top: 40px;
+            }
+
+            #birthday-popup h2 {
+                font-size: 1.1rem;
+            }
+
+            #birthday-popup p {
+                font-size: 0.9rem;
+                margin-bottom: 12px;
+            }
+
+            #birthday-popup button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
+
 <body class="darkmode">
+
     <div id="main-container">
-        <!-- Your existing content remains the same -->
+
         <div class="nav-container">
-            <img id="nav-logo" loading="eager" src="images/logo2.svg" alt="sudopkw" decoding="async" />
+            <img
+                id="nav-logo"
+                loading="eager"
+                src="images/logo2.svg"
+                alt="sudopkw"
+                decoding="async"
+            />
+
             <div id="hamburger-menu">
-                <input class="checkbox" type="checkbox" name="hamburger-toggle" aria-label="Mobile menu toggle" />
+                <input
+                    class="checkbox"
+                    type="checkbox"
+                    name="hamburger-toggle"
+                    aria-label="Mobile menu toggle"
+                />
+
                 <div class="hamburger-lines">
                     <span class="line line1"></span>
                     <span class="line line2"></span>
@@ -172,323 +212,678 @@
                 </div>
             </div>
         </div>
+
         <div id="section-container">
+
             <div id="left-section">
+
+                <!-- HOME -->
                 <header class="container selected-frame" id="home">
                     <div class="container-content">
+
                         <div class="title decorating-text">
-                            <p>
-                                Home
-                            </p>
+                            <p>Home</p>
                             <div></div>
                         </div>
+
                         <p id="home-section-paragraph">
-                            Hiya, I'm <span class="text-olive">sudopkw</span> !
+                            Hiya, I'm
+                            <span class="text-olive">sudopkw</span> !
                         </p>
+
                         <p id="mobile-help">
-                            <span class="text-orange">Press</span> around to <span class="text-orange">explore</span>
+                            <span class="text-orange">Press</span>
+                            around to
+                            <span class="text-orange">explore</span>
                             the website.
                         </p>
+
                     </div>
                 </header>
-                <div class="container" id="experience">
-                    <div class="container-content">
-                        <div id="experience-title" class="title decorating-text">
-                            <p>
-                                Experience
-                            </p>
-                            <div></div>
-                        </div>
-                        <div id="experience-index" class="list-index decorating-text">
-                            <p>1 of 3</p>
-                            <div></div>
-                        </div>
-                        <div class="ui-list">
-                            <div>
-                                <div>Lua Alchemist & Failure</div>
-                                <div>@ <span class="text-orange">None</span></div>
-                            </div>
-                            <div>
-                                <div>Python Stomper</div>
-                                <div>@ <span class="text-orange">None</span></div>
-                            </div>
-                            <div>
-                                <div>Lua Wizard (Part 2?)</div>
-                                <div>@ <span class="text-orange">None</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                <!-- PROJECTS -->
                 <div class="container" id="projects">
                     <div class="container-content">
+
                         <div class="title decorating-text">
                             <p>Projects</p>
                             <div></div>
                         </div>
+
                         <div class="list-index decorating-text">
-                            <p>1 of 3</p>
+                            <p>1 of 4</p>
                             <div></div>
                         </div>
+
                         <div class="ui-list">
                             <div>PKW.FUN</div>
                             <div>Discord Self-Bot</div>
                             <div>sudopkw.dev</div>
+                            <div>My own fish config</div>
                         </div>
+
                     </div>
                 </div>
+
+                <!-- SKILLS -->
                 <div class="container" id="skills">
                     <div class="container-content">
+
                         <div id="skills-title" class="title decorating-text">
-                            <p>
-                                Skills - Tools
-                            </p>
+                            <p>Skills - Tools</p>
                             <div></div>
                         </div>
+
                         <div id="skills-index" class="list-index decorating-text">
                             <p>1 of 7</p>
                             <div></div>
                         </div>
+
                         <div class="ui-list">
-                            <div><img src="images/lua.svg" alt="" decoding="async" />Lua</div>
-                            <div><img src="images/python.svg" alt="" decoding="async" />Python</div>
-                            <div><img src="images/sql.svg" alt="" decoding="async" />SQL</div>
-                            <div><img src="images/js.svg" alt="" decoding="async" />JavaScript</div>
-                            <div><img src="images/linux.svg" alt="" decoding="async" />Linux</div>
-                            <div><img src="images/lang.svg" alt="" decoding="async" />Human Languages</div>
-                            <div><img src="images/neovim.svg" alt="" decoding="async" />Neovim</div>
+
+                            <div>
+                                <img src="images/lua.svg" alt="" decoding="async" />
+                                Lua
+                            </div>
+
+                            <div>
+                                <img src="images/python.svg" alt="" decoding="async" />
+                                Python
+                            </div>
+
+                            <div>
+                                <img src="images/sql.svg" alt="" decoding="async" />
+                                SQL
+                            </div>
+
+                            <div>
+                                <img src="images/js.svg" alt="" decoding="async" />
+                                JavaScript
+                            </div>
+
+                            <div>
+                                <img src="images/linux.svg" alt="" decoding="async" />
+                                Linux
+                            </div>
+
+                            <div>
+                                <img src="images/lang.svg" alt="" decoding="async" />
+                                Human Languages
+                            </div>
+
+                            <div>
+                                <img src="images/neovim.svg" alt="" decoding="async" />
+                                Neovim
+                            </div>
+
                         </div>
                     </div>
                 </div>
-                <!-- STATS WIDGET - Always visible -->
+
+                <!-- STATS -->
                 <div class="container" id="stats">
                     <div class="container-content">
+
                         <div class="title decorating-text">
                             <p>Stats</p>
                             <div></div>
                         </div>
+
                         <div class="ui-list">
+
                             <div>
                                 <div>Unique Visitors:</div>
-                                <div><span class="text-orange" id="visitor-counter">Loading...</span></div>
+                                <div>
+                                    <span class="text-orange" id="visitor-counter">
+                                        Loading...
+                                    </span>
+                                </div>
                             </div>
+
                             <div>
                                 <div>First-time Visitor:</div>
-                                <div><span class="text-orange" id="first-visit-status">Checking...</span></div>
+                                <div>
+                                    <span class="text-orange" id="first-visit-status">
+                                        Checking...
+                                    </span>
+                                </div>
                             </div>
+
                             <div>
                                 <div>Visit Count:</div>
-                                <div><span class="text-olive" id="visit-count">1</span></div>
+                                <div>
+                                    <span class="text-olive" id="visit-count">
+                                        1
+                                    </span>
+                                </div>
                             </div>
+
                             <div>
                                 <div>Screen Size:</div>
-                                <div><span class="text-orange" id="screen-size">Loading...</span></div>
+                                <div>
+                                    <span class="text-orange" id="screen-size">
+                                        Loading...
+                                    </span>
+                                </div>
                             </div>
+
                             <div>
                                 <div>Operating System:</div>
-                                <div><span class="text-orange" id="os-type">Detecting...</span></div>
+                                <div>
+                                    <span class="text-orange" id="os-type">
+                                        Detecting...
+                                    </span>
+                                </div>
                             </div>
+
                             <div>
                                 <div>Favorite Section:</div>
-                                <div><span class="text-olive" id="favorite-section">None yet</span></div>
+                                <div>
+                                    <span class="text-olive" id="favorite-section">
+                                        None yet
+                                    </span>
+                                </div>
                             </div>
-                            <!-- NEW STATS -->
+
                             <div>
                                 <div>Tip:</div>
-                                <div><span class="text-orange" id="daily-tip">Loading...</span></div>
+                                <div>
+                                    <span class="text-orange" id="daily-tip">
+                                        Loading...
+                                    </span>
+                                </div>
                             </div>
+
                             <div>
                                 <div>Fun Fact:</div>
-                                <div><span class="text-orange" id="fun-stat">Loading...</span></div>
+                                <div>
+                                    <span class="text-orange" id="fun-stat">
+                                        Loading...
+                                    </span>
+                                </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
+
             </div>
+
             <div id="right-section">
+
                 <div class="container h-fill" id="main-content">
+
                     <div class="container-content">
+
                         <div id="logo-container">
-                            <img loading="eager" src="images/logo2.svg" id="logo" alt="sudopkw" decoding="async" />
+                            <img
+                                loading="eager"
+                                src="images/logo2.svg"
+                                id="logo"
+                                alt="sudopkw"
+                                decoding="async"
+                            />
                         </div>
+
                         <div class="outer-paragraph-container">
+
                             <div class="inner-paragraph-container">
+
                                 <div>
-                                    <p><span class="text-orange">$ whoami</span></p>
+                                    <p>
+                                        <span class="text-orange">$ whoami</span>
+                                    </p>
+
                                     <p>pkw</p>
                                     <p>coder</p>
                                     <p>professional linux glazer</p>
                                     <p>tinkerer</p>
                                 </div>
+
                                 <div>
                                     <p>currently:</p>
-                                    <p><span class="text-olive">├─</span> building shit</p>
-                                    <p><span class="text-olive">├─</span> breaking shit</p>
-                                    <p><span class="text-olive">├─</span> learning shit</p>
-                                    <p><span class="text-olive">└─</span> occasionally fixing the shit I broke</p>
+
+                                    <p>
+                                        <span class="text-olive">├─</span>
+                                        building shit
+                                    </p>
+
+                                    <p>
+                                        <span class="text-olive">├─</span>
+                                        breaking shit
+                                    </p>
+
+                                    <p>
+                                        <span class="text-olive">├─</span>
+                                        learning shit
+                                    </p>
+
+                                    <p>
+                                        <span class="text-olive">└─</span>
+                                        occasionally fixing the shit I broke
+                                    </p>
                                 </div>
+
                                 <div id="desktop-help">
-                                    <p><span class="text-orange">Click</span> a section on the left to dig into my <span class="text-olive">work</span> and past <span class="text-orange">experiences</span>.</p>
-                                    <p>Or just <span class="text-orange">navigate</span> with the <span class="text-olive">arrow keys</span> - or <span class="text-orange">Vim motions</span>, if you’re one of us. <span class="text-olive">B)</span></p>
+
+                                    <p>
+                                        <span class="text-orange">Click</span>
+                                        a section on the left to dig into my
+                                        <span class="text-olive">work</span>
+                                        and past
+                                        <span class="text-orange">experiences</span>.
+                                    </p>
+
+                                    <p>
+                                        Or just
+                                        <span class="text-orange">navigate</span>
+                                        with the
+                                        <span class="text-olive">arrow keys</span>
+                                        - or
+                                        <span class="text-orange">Vim motions</span>,
+                                        if you’re one of us.
+                                        <span class="text-olive">B)</span>
+                                    </p>
+
                                 </div>
+
                                 <p id="mobile-help">
-                                    <span class="text-orange">Press</span> the menu button at the top-right of the screen to start <span class="text-orange">exploring</span> the website.
+                                    <span class="text-orange">Press</span>
+                                    the menu button at the top-right of the screen
+                                    to start
+                                    <span class="text-orange">exploring</span>
+                                    the website.
                                 </p>
+
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
         <footer class="container text-olive" id="footer">
+
             <div class="footer-item" id="footer-help">
                 &lt;pgup&gt;/&lt;pgdown&gt;: Scroll,
                 &lt;left&gt;/&lt;right&gt;: Switch section,
                 &lt;1-4&gt;: Jump to section,
                 &lt;up&gt;/&lt;down&gt;: Switch item
+
                 <span class="text-orange">
                     (or just use the mouse)
                 </span>
             </div>
+
             <div class="footer-item">
-                <a class="text-olive" href="https://github.com/sudopkw/" target="_blank">
+
+                <a
+                    class="text-olive"
+                    href="https://github.com/sudopkw/"
+                    target="_blank"
+                >
                     GitHub
                 </a>
-                <a class="text-orange" href="https://steamcommunity.com/id/sudopkw/" target="_blank">
+
+                <a
+                    class="text-orange"
+                    href="https://steamcommunity.com/id/sudopkw/"
+                    target="_blank"
+                >
                     Steam
                 </a>
-                <a class="text-orange" href="https://www.tiktok.com/@whoamipkw" target="_blank">
+
+                <a
+                    class="text-orange"
+                    href="https://www.tiktok.com/@whoamipkw"
+                    target="_blank"
+                >
                     Tiktok
                 </a>
-                <a class="text-olive" href="https://stats.fm/pkw" target="_blank">
+
+                <a
+                    class="text-olive"
+                    href="https://stats.fm/pkw"
+                    target="_blank"
+                >
                     SpotiStats
                 </a>
+
             </div>
+
         </footer>
+
     </div>
+
     <!-- Birthday celebration elements -->
     <div id="confetti-container"></div>
+
     <div id="popup-overlay" style="display: none;"></div>
+
     <div id="birthday-popup" style="display: none;">
+
         <h2>Hiya! It's my birthday today! 🎉</h2>
-        <p>Thank you for visiting on this special day!</p>
-        <button id="close-birthday-popup">Happy birthday! B)</button>
+
+        <p>
+            Thank you for visiting on this special day!
+        </p>
+
+        <button id="close-birthday-popup">
+            Happy birthday! B)
+        </button>
+
     </div>
+
     <!-- Combined Stats Script -->
     <script>
     document.addEventListener('DOMContentLoaded', function() {
+
         // Initialize all elements
-        const counterElement = document.getElementById('visitor-counter');
-        const visitStatusElement = document.getElementById('first-visit-status');
-        const visitCountElement = document.getElementById('visit-count');
-        const screenSizeElement = document.getElementById('screen-size');
-        const osTypeElement = document.getElementById('os-type');
-        const favoriteSectionElement = document.getElementById('favorite-section');
-        const tipElement = document.getElementById('daily-tip');
-        const funElement = document.getElementById('fun-stat');
+        const counterElement =
+            document.getElementById('visitor-counter');
+
+        const visitStatusElement =
+            document.getElementById('first-visit-status');
+
+        const visitCountElement =
+            document.getElementById('visit-count');
+
+        const screenSizeElement =
+            document.getElementById('screen-size');
+
+        const osTypeElement =
+            document.getElementById('os-type');
+
+        const favoriteSectionElement =
+            document.getElementById('favorite-section');
+
+        const tipElement =
+            document.getElementById('daily-tip');
+
+        const funElement =
+            document.getElementById('fun-stat');
+
+
         // Birthday celebration elements
-        const confettiContainer = document.getElementById('confetti-container');
-        const birthdayPopup = document.getElementById('birthday-popup');
-        const popupOverlay = document.getElementById('popup-overlay');
-        const closeButton = document.getElementById('close-birthday-popup');
+        const confettiContainer =
+            document.getElementById('confetti-container');
+
+        const birthdayPopup =
+            document.getElementById('birthday-popup');
+
+        const popupOverlay =
+            document.getElementById('popup-overlay');
+
+        const closeButton =
+            document.getElementById('close-birthday-popup');
+
+
         // Track section clicks for favorite section
         let sectionClicks = {
             home: 0,
-            experience: 0,
             projects: 0,
             skills: 0,
             stats: 0
         };
+
+
         // Load previous data from localStorage
         if (typeof(Storage) !== "undefined") {
-            let visitCount = localStorage.getItem('visitCount') || 0;
-            visitCount = parseInt(visitCount) + 1;
-            localStorage.setItem('visitCount', visitCount);
-            if (visitCountElement) visitCountElement.textContent = visitCount;
-            const hasVisited = localStorage.getItem('hasVisitedBefore');
+
+            let visitCount =
+                localStorage.getItem('visitCount') || 0;
+
+            visitCount =
+                parseInt(visitCount) + 1;
+
+            localStorage.setItem(
+                'visitCount',
+                visitCount
+            );
+
+            if (visitCountElement) {
+                visitCountElement.textContent =
+                    visitCount;
+            }
+
+
+            const hasVisited =
+                localStorage.getItem('hasVisitedBefore');
+
             if (!hasVisited) {
-                localStorage.setItem('hasVisitedBefore', 'true');
-                if (visitStatusElement) visitStatusElement.textContent = 'true';
+
+                localStorage.setItem(
+                    'hasVisitedBefore',
+                    'true'
+                );
+
+                if (visitStatusElement) {
+                    visitStatusElement.textContent =
+                        'true';
+                }
+
             } else {
-                if (visitStatusElement) visitStatusElement.textContent = 'false';
-            }
-            const savedClicks = localStorage.getItem('sectionClicks');
-            if (savedClicks) {
-                sectionClicks = JSON.parse(savedClicks);
-                updateFavoriteSection();
-            }
-            document.querySelectorAll('.container').forEach(section => {
-                section.addEventListener('click', function() {
-                    const sectionId = this.id;
-                    if (sectionClicks[sectionId] !== undefined) {
-                        sectionClicks[sectionId]++;
-                        localStorage.setItem('sectionClicks', JSON.stringify(sectionClicks));
-                        updateFavoriteSection();
-                    }
-                });
-            });
-        } else {
-            if (visitStatusElement) visitStatusElement.textContent = 'Unknown';
-            if (visitCountElement) visitCountElement.textContent = '1';
-        }
-        function updateFavoriteSection() {
-            let maxClicks = 0;
-            let favorite = 'None yet';
-            for (const [section, clicks] of Object.entries(sectionClicks)) {
-                if (clicks > maxClicks) {
-                    maxClicks = clicks;
-                    favorite = section.charAt(0).toUpperCase() + section.slice(1);
+
+                if (visitStatusElement) {
+                    visitStatusElement.textContent =
+                        'false';
                 }
             }
-            if (favoriteSectionElement && maxClicks > 0) {
-                favoriteSectionElement.textContent = favorite;
+
+
+            const savedClicks =
+                localStorage.getItem('sectionClicks');
+
+            if (savedClicks) {
+
+                sectionClicks =
+                    JSON.parse(savedClicks);
+
+                updateFavoriteSection();
+            }
+
+
+            document
+                .querySelectorAll('.container')
+                .forEach(section => {
+
+                    section.addEventListener(
+                        'click',
+                        function() {
+
+                            const sectionId =
+                                this.id;
+
+                            if (
+                                sectionClicks[
+                                    sectionId
+                                ] !== undefined
+                            ) {
+
+                                sectionClicks[
+                                    sectionId
+                                ]++;
+
+                                localStorage.setItem(
+                                    'sectionClicks',
+                                    JSON.stringify(
+                                        sectionClicks
+                                    )
+                                );
+
+                                updateFavoriteSection();
+                            }
+                        }
+                    );
+                });
+
+        } else {
+
+            if (visitStatusElement) {
+                visitStatusElement.textContent =
+                    'Unknown';
+            }
+
+            if (visitCountElement) {
+                visitCountElement.textContent =
+                    '1';
             }
         }
-        if (screenSizeElement) {
-            screenSizeElement.textContent = `${screen.width}x${screen.height}`;
+
+
+        function updateFavoriteSection() {
+
+            let maxClicks = 0;
+            let favorite = 'None yet';
+
+            for (
+                const [section, clicks]
+                of Object.entries(sectionClicks)
+            ) {
+
+                if (clicks > maxClicks) {
+
+                    maxClicks = clicks;
+
+                    favorite =
+                        section.charAt(0).toUpperCase() +
+                        section.slice(1);
+                }
+            }
+
+            if (
+                favoriteSectionElement &&
+                maxClicks > 0
+            ) {
+
+                favoriteSectionElement.textContent =
+                    favorite;
+            }
         }
+
+
+        if (screenSizeElement) {
+
+            screenSizeElement.textContent =
+                `${screen.width}x${screen.height}`;
+        }
+
+
         if (osTypeElement) {
-            const userAgent = navigator.userAgent;
+
+            const userAgent =
+                navigator.userAgent;
+
             let os = 'Unknown';
-            if (userAgent.includes('Win')) os = 'Windows';
-            else if (userAgent.includes('Mac')) os = 'macOS';
-            else if (userAgent.includes('Linux')) os = 'Linux';
-            else if (userAgent.includes('Android')) os = 'Android';
-            else if (userAgent.includes('iOS') || userAgent.includes('iPhone') || userAgent.includes('iPad')) os = 'iOS';
+
+            if (userAgent.includes('Win')) {
+                os = 'Windows';
+
+            } else if (userAgent.includes('Mac')) {
+                os = 'macOS';
+
+            } else if (userAgent.includes('Linux')) {
+                os = 'Linux';
+
+            } else if (
+                userAgent.includes('iOS') ||
+                userAgent.includes('iPhone') ||
+                userAgent.includes('iPad')
+            ) {
+                os = 'iOS';
+
+            } else if (userAgent.includes('Android')) {
+                os = 'Android';
+            }
+
             osTypeElement.textContent = os;
         }
+
+
         // Visitor counter
         if (counterElement) {
-            const API_URL = 'https://sudopkw-github-io.vercel.app/api/visitor';
-            let visitorId = localStorage.getItem('visitor_id');
+
+            const API_URL =
+                'https://sudopkw-github-io.vercel.app/api/visitor';
+
+            let visitorId =
+                localStorage.getItem('visitor_id');
+
             if (!visitorId) {
-                visitorId = 'visitor_' + crypto.randomUUID();
-                localStorage.setItem('visitor_id', visitorId);
+
+                visitorId =
+                    'visitor_' +
+                    crypto.randomUUID();
+
+                localStorage.setItem(
+                    'visitor_id',
+                    visitorId
+                );
             }
+
             fetch(API_URL, {
+
                 method: 'POST',
+
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type':
+                        'application/json'
                 },
+
                 body: JSON.stringify({
                     visitorId: visitorId
                 })
+
             })
+
             .then(response => {
-                if (!response.ok) throw new Error(`API error: ${response.status}`);
-                return response.json();
-            })
-            .then(data => {
-                if (data && data.count !== undefined) {
-                    counterElement.textContent = data.count;
-                } else {
-                    counterElement.textContent = 'Error';
+
+                if (!response.ok) {
+                    throw new Error(
+                        `API error: ${response.status}`
+                    );
                 }
+
+                return response.json();
+
             })
+
+            .then(data => {
+
+                if (
+                    data &&
+                    data.count !== undefined
+                ) {
+
+                    counterElement.textContent =
+                        data.count;
+
+                } else {
+
+                    counterElement.textContent =
+                        'Error';
+                }
+
+            })
+
             .catch(error => {
-                console.log('Counter error:', error);
-                counterElement.textContent = 'Offline';
+
+                console.log(
+                    'Counter error:',
+                    error
+                );
+
+                counterElement.textContent =
+                    'Offline';
             });
         }
+
+
         const dailyTips = [
             "Remember to take breaks while coding!",
             "Try learning a new Lua function today.",
@@ -510,6 +905,8 @@
             "Document your code, future-you will thank you.",
             "1 larp sesh a day, keeps the normies away"
         ];
+
+
         const funStats = [
             "1337",
             "I'm so booooored!",
@@ -526,70 +923,178 @@
             "Did you know? Ctrl+C/Ctrl+V is magical.",
             "SUPER is magical too!"
         ];
-        if(tipElement) tipElement.textContent = dailyTips[Math.floor(Math.random()*dailyTips.length)];
-        if(funElement) funElement.textContent = funStats[Math.floor(Math.random()*funStats.length)];
+
+
+        if (tipElement) {
+            tipElement.textContent =
+                dailyTips[
+                    Math.floor(
+                        Math.random() *
+                        dailyTips.length
+                    )
+                ];
+        }
+
+
+        if (funElement) {
+            funElement.textContent =
+                funStats[
+                    Math.floor(
+                        Math.random() *
+                        funStats.length
+                    )
+                ];
+        }
+
+
         // Birthday celebration functionality
         function checkBirthday() {
-            // Set your birthday date here (month is 0-indexed, so 0 = January, 11 = December)
-            const birthdayMonth = 10; // November (change this to your birth month)
-            const birthdayDay = 22; // 15th (change this to your birth day)
-           
+
+            const birthdayMonth = 10;
+            const birthdayDay = 22;
+
             const today = new Date();
-            const month = today.getMonth();
-            const day = today.getDate();
-           
-            return (month === birthdayMonth && day === birthdayDay);
+
+            const month =
+                today.getMonth();
+
+            const day =
+                today.getDate();
+
+            return (
+                month === birthdayMonth &&
+                day === birthdayDay
+            );
         }
+
+
         function createConfetti() {
-            const colors = ['#58a6ff', '#f778ba', '#ff7b72', '#79c0ff', '#a5d6ff', '#d2a8ff'];
-           
+
+            const colors = [
+                '#58a6ff',
+                '#f778ba',
+                '#ff7b72',
+                '#79c0ff',
+                '#a5d6ff',
+                '#d2a8ff'
+            ];
+
             for (let i = 0; i < 150; i++) {
-                const confetti = document.createElement('div');
-                confetti.className = 'confetti';
-                confetti.style.left = Math.random() * 100 + 'vw';
-                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                confetti.style.width = Math.random() * 10 + 5 + 'px';
-                confetti.style.height = Math.random() * 10 + 5 + 'px';
-                confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
-               
-                const animation = confetti.animate([
-                    { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
-                    { transform: `translateY(${window.innerHeight}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
-                ], {
-                    duration: Math.random() * 3000 + 2000,
-                    delay: Math.random() * 2000
-                });
-               
-                confettiContainer.appendChild(confetti);
-               
+
+                const confetti =
+                    document.createElement('div');
+
+                confetti.className =
+                    'confetti';
+
+                confetti.style.left =
+                    Math.random() * 100 + 'vw';
+
+                confetti.style.backgroundColor =
+                    colors[
+                        Math.floor(
+                            Math.random() *
+                            colors.length
+                        )
+                    ];
+
+                confetti.style.width =
+                    Math.random() * 10 + 5 + 'px';
+
+                confetti.style.height =
+                    Math.random() * 10 + 5 + 'px';
+
+                confetti.style.borderRadius =
+                    Math.random() > 0.5
+                        ? '50%'
+                        : '0';
+
+
+                const animation =
+                    confetti.animate(
+                        [
+                            {
+                                transform:
+                                    'translateY(0) rotate(0deg)',
+                                opacity: 1
+                            },
+                            {
+                                transform:
+                                    `translateY(${window.innerHeight}px) rotate(${Math.random() * 360}deg)`,
+                                opacity: 0
+                            }
+                        ],
+                        {
+                            duration:
+                                Math.random() * 3000 + 2000,
+
+                            delay:
+                                Math.random() * 2000
+                        }
+                    );
+
+
+                confettiContainer.appendChild(
+                    confetti
+                );
+
+
                 animation.onfinish = () => {
                     confetti.remove();
                 };
             }
         }
+
+
         function showBirthdayPopup() {
-            popupOverlay.style.display = 'block';
-            birthdayPopup.style.display = 'block';
-           
-            // Add event listener to close button
-            closeButton.addEventListener('click', () => {
-                popupOverlay.style.display = 'none';
-                birthdayPopup.style.display = 'none';
-            });
-           
-            // Also close when clicking outside the popup
-            popupOverlay.addEventListener('click', () => {
-                popupOverlay.style.display = 'none';
-                birthdayPopup.style.display = 'none';
-            });
+
+            popupOverlay.style.display =
+                'block';
+
+            birthdayPopup.style.display =
+                'block';
+
+
+            closeButton.addEventListener(
+                'click',
+                () => {
+
+                    popupOverlay.style.display =
+                        'none';
+
+                    birthdayPopup.style.display =
+                        'none';
+                }
+            );
+
+
+            popupOverlay.addEventListener(
+                'click',
+                () => {
+
+                    popupOverlay.style.display =
+                        'none';
+
+                    birthdayPopup.style.display =
+                        'none';
+                }
+            );
         }
+
+
         // Check if it's your birthday and trigger celebration
         if (checkBirthday()) {
+
             createConfetti();
-            // Show popup after a short delay
-            setTimeout(showBirthdayPopup, 100);
+
+            setTimeout(
+                showBirthdayPopup,
+                100
+            );
         }
+
     });
     </script>
+
 </body>
 </html>
