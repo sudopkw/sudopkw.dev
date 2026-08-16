@@ -218,7 +218,7 @@ svg {
   justify-content: center;
   width: 70%;
   padding: 0.5rem;
-  border: 0.1px solid var(--clr-orange);
+  border: 0.1px solid var(--clr-olive);
 }
 
 .project-image {
@@ -234,7 +234,7 @@ pre {
   font-size: 0.8rem;
   line-height: 1.2rem;
   padding: 0.5rem;
-  border: 0.1px solid var(--clr-border);
+  border: 0.1px solid var(--clr-olive);
   color: var(--clr-fg);
   overflow-x: scroll;
 }
