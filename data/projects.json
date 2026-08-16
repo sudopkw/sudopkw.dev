@@ -2,7 +2,7 @@
   "data": [
     {
       "name": "PKW.FUN", 
-      "images": ["../images/image.png"],
+      "images": ["../images/pkw-fun.png"],
       "year": 2025,
       "demoUrl": "none",
       "content": [
@@ -13,6 +13,7 @@
     },
     {
       "name": "Discord Self-Bot",
+      "images": ["../images/discord-self-bot.png"]
       "year": 2023,
       "demoUrl": "https://github.com/sudopkw/Alt-Bot",
       "content": [
@@ -26,23 +27,26 @@
       "year": 2025,
       "demoUrl": "https://github.com/sudopkw/sudopkw.github.io",
       "content": [
-        "Wild, right? {{This website}} itself is one of my projects - built as a way to understand {{SQL}}, {{HTML}}, and {{CSS}} better.",
+        "{{This website}} itself is one of the things i decided to ruin with my stupidity, as a way to learn {{JS}}, {{HTML}}, and {{CSS}} better.",
         "I don’t really see myself going into web development, but it was a {{fun experiment}}",
-        "I’ll (probably) keep {{updating}} this site as I {{learn}} more",
-        "Also, Big thanks to {{Arthur Wallendorff}} for letting people (including me) use and modify his {{Wallenart portfolio}} as a base to {{learn}} and {{improve skills}}"
+        "I’ll (probably) keep {{updating}} this site if i feel like it should be ruined more, as what i have done is a {{sin}}",
+        "In fact, {{Arthur}} is probably {{rolling in his bed without sleep}} because of what i've done to his {{beautiful}} creation",
+        "Oh yeah, Big thanks to {{Arthur Wallendorff}} for letting people use and modify his {{Wallenart portfolio}} as a base to {{learn}} and {{improve skills}}, or something"
       ],
       "technologies": ["SQL", "JavaScript", "HTML", "CSS", "JSON"]
     },
     {
-      "name": "My own fish config",
+      "name": "fish-shell-config",
+      "images": ["../images/fish-config-help.jpg", "../images/fish-config-info.jpg", "../images/fish-config-weatehr.jpg", "../images/fish-config-log.jpg"]
       "year": 2026,
       "demoUrl": "https://github.com/sudopkw/fish-config-backup",
       "content": [
         "A {{config}} for the {{fish}} shell",
         "made by {{yours truly}}, as a result of {{too much free time}} on my hands",
-        "it's a {{900-something}} line config that does a bunch of {{useless shit}}, despite providing SOME useful things"
+        "it's a {{900-something}} line config that does a bunch of {{useless shit}}, despite providing {{some}} useful things",
+        "but at least it looks {{pretty}}, am i rite?"
       ],
-      "technologies": ["BASH"]
+      "technologies": ["Bash"]
     }
   ]
 }
