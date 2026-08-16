@@ -44,9 +44,11 @@
       "content": [
         "Linux is an {{open-source OS}} based on {{Unix}} — the backbone of most {{servers}} and the heart of {{Android}}.",
         "I’ve been using Linux for {{2–3 years}} and feel right at home with it. Tried lots of {{distros}}, but I always return to {{Arch-based}} ones.",
-        "It’s {{free}}, {{stable}}, {{customizable}}, and {{powerful}} — easily my favorite {{development environment}}.",
+        "It’s {{free}}, {{stable}}, {{customizable}}, and {{powerful}} — easily my favorite {{development and casual environment}}.",
         "I run {{Linux}} as my daily driver. If you’re curious, I’m currently using <a href=\"https://omarchy.org/\" target=\"_blank\" class=\"text-orange\">OMARCHY</a>, an {{Arch-based distro}} with {{Hyprland}} by default and tons of {{TUI elements}}.",
-        "It’s made by <a href=\"https://dhh.dk/\" target=\"_blank\" class=\"text-olive\">DHH</a>, so you know it’s built right."
+        "It’s made by <a href=\"https://dhh.dk/\" target=\"_blank\" class=\"text-olive\">DHH</a>, so you know it’s built right.",
+        "Defeats the point of Arch? Sure. But i don't care, I'm using it because i'm more familliar with the arch-architecture as my first ever linux download was actually Arch linux, Installed the right way.",
+        "As for the bloat, It's pretty easily removable, and i have de-bloated it myself in around 20 minutes of my time."
       ],
       "snippet": null
     },
@@ -55,7 +57,7 @@
       "content": [
         "Yeah, I kept this one in here because it’s too funny not to.",
         "I’m fluent in {{English}} (shocker), {{Croatian}}, and can read/write in {{Cyrillic Script}}.",
-        "I studied a bit of {{Russian}}, and while I can understand it decently... speaking it? Yeah, not happening. Lmao.",
+        "I studied a bit of {{Russian}}, and while I can understand it decently... speaking it? Yeah, not happening.",
         "I like to throw around some Blasphemies and common swears in {{Italian}} Too, so that's always fun."
       ],
       "snippet": null
@@ -65,11 +67,22 @@
       "content": [
         "Neovim is a {{keyboard-driven text editor}} built off Vim, supporting {{multiple modes}} like {{Normal}}, {{Visual}}, and {{Insert}}.",
         "It’s insanely {{customizable}} with {{Lua scripting}} and has a massive community making extensions.",
-        "I started using it in mid {{2023}} and still have lots to {{learn}} — {{buffers}}, {{navigation}}, and more.",
+        "I started using it in mid {{2025}} and still have lots to {{learn}} — {{buffers}}, {{navigation}}, and more.",
         "But I use it for {{everything}} now, and I feel right at home in it.",
-        "(Also, yeah — it’s a total {{flex}} on other devs.)"
+        "(Also, yeah - it’s a total {{flex}} on other devs and normies)"
       ],
       "snippet": null
+    },
+    {
+      "name": " Bash",
+      "content": [
+        "Bash is a {{shell}}. It is used to {{interact}} with the {{operating system}}.",
+        "It's useful to {{navigate}} the {{file system}}, {{install}} and {{update}} software, {{manage}} processes, {{configure}} the {{operating system}} and {{automate}} tasks.",
+        "I have been using Bash for over {{3 years}}\nI have used it to {{automate}} the {{build}} and {{deployment}} of various code, as well as {{connect tools}} such as {{GitHub}}"
+        
+      ],
+      "snippet": "sh"
     }
+
   ]
 }
