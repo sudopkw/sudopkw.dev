@@ -38,18 +38,16 @@
     {
       "name": "fish-shell-config",
       "images": [
-        "../images/fish-config-help.jpg", 
         "../images/fish-config-info.jpg", 
-        "../images/fish-config-weatehr.jpg", 
+        "../images/fish-config-help.jpg", 
+        "../images/fish-config-weather.jpg", 
         "../images/fish-config-log.jpg"
       ],
       "year": 2026,
       "demoUrl": "https://github.com/sudopkw/fish-config-backup",
       "content": [
         "A {{config}} for the {{fish}} shell",
-        "made by {{yours truly}}, as a result of {{too much free time}} on my hands",
-        "it's a {{900-something}} line config that does a bunch of {{useless shit}}, despite providing {{some}} useful things",
-        "but at least it looks {{pretty}}, am i rite?"
+        "made by {{yours truly}}, as a result of {{too much free time}} on my hands \n it's a {{900-something}} line config that does a bunch of {{useless shit}}, despite providing {{some}} useful things \n but at least it looks {{pretty}}, am i rite?"
       ],
       "technologies": ["Bash"]
     }
