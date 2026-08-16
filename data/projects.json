@@ -13,7 +13,7 @@
     },
     {
       "name": "Discord Self-Bot",
-      "images": ["../images/discord-self-bot.png"]
+      "images": ["../images/discord-self-bot.png"],
       "year": 2023,
       "demoUrl": "https://github.com/sudopkw/Alt-Bot",
       "content": [
@@ -24,7 +24,7 @@
     },
     {
       "name": "sudopkw.github.io",
-      "year": 2025,
+      "year": 2025 - 2026,
       "demoUrl": "https://github.com/sudopkw/sudopkw.github.io",
       "content": [
         "{{This website}} itself is one of the things i decided to ruin with my stupidity, as a way to learn {{JS}}, {{HTML}}, and {{CSS}} better.",
@@ -37,7 +37,12 @@
     },
     {
       "name": "fish-shell-config",
-      "images": ["../images/fish-config-help.jpg", "../images/fish-config-info.jpg", "../images/fish-config-weatehr.jpg", "../images/fish-config-log.jpg"]
+      "images": [
+        "../images/fish-config-help.jpg", 
+        "../images/fish-config-info.jpg", 
+        "../images/fish-config-weatehr.jpg", 
+        "../images/fish-config-log.jpg"
+      ],
       "year": 2026,
       "demoUrl": "https://github.com/sudopkw/fish-config-backup",
       "content": [
